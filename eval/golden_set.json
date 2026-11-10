@@ -1,0 +1,79 @@
+{
+  "description": "Golden question set for the SourceWise sample corpus (63 questions: 51 answerable, 12 unanswerable). Questions are phrased the way a member of staff would ask them, not copied from the documents. 'expected' names the document and section that contain the answer. 'answer_contains' lists short strings; a correct answer must include at least one of them (several are listed only where the same fact is worded differently in two documents). Questions with answerable=false are not covered by the corpus and should be abstained on. This file was written and frozen before the abstention rule was redesigned and was not used for tuning; see eval/README.md.",
+  "questions": [
+    {"id": "n01", "question": "Do I get a break if I'm on a seven-hour shift, and is it paid?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Breaks"}], "answer_contains": ["30 minutes"]},
+    {"id": "n02", "question": "If I end up working extra hours, how long do I have to take the time back?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Overtime and time off in lieu"}], "answer_contains": ["eight weeks"]},
+    {"id": "n03", "question": "Does my holiday entitlement go up the longer I've worked here?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Annual leave"}], "answer_contains": ["27 days"]},
+    {"id": "n04", "question": "Is it possible to buy a few more days off?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Buying additional leave"}], "answer_contains": ["five extra days"]},
+    {"id": "n05", "question": "How many days of sick leave are paid at full salary?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Sickness absence"}], "answer_contains": ["10 working days"]},
+    {"id": "n06", "question": "My dad has just died. How much time off am I entitled to?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Compassionate leave"}], "answer_contains": ["five days"]},
+    {"id": "n07", "question": "What date does our salary go into the bank?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Pay day"}, {"document": "new-starter-onboarding-guide.md", "section": "Getting paid for the first time"}], "answer_contains": ["25th"]},
+    {"id": "n08", "question": "Can I wear sandals when I'm working in a treatment room?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Dress and identification"}], "answer_contains": ["closed-toe"]},
+    {"id": "n09", "question": "How much is the training budget for a physiotherapist each year?", "answerable": true, "expected": [{"document": "employee-handbook.md", "section": "Professional fees and development"}], "answer_contains": ["£600"]},
+
+    {"id": "n10", "question": "What documents do you need from me before I start the job?", "answerable": true, "expected": [{"document": "new-starter-onboarding-guide.md", "section": "Before your first day"}], "answer_contains": ["right to work"]},
+    {"id": "n11", "question": "How soon after joining do I have to finish the data protection course?", "answerable": true, "expected": [{"document": "new-starter-onboarding-guide.md", "section": "Mandatory training"}, {"document": "information-security-policy.md", "section": "Training and compliance"}], "answer_contains": ["5 working days", "five working days"]},
+    {"id": "n12", "question": "For how long will I have a buddy?", "answerable": true, "expected": [{"document": "new-starter-onboarding-guide.md", "section": "Your buddy"}], "answer_contains": ["eight weeks"]},
+    {"id": "n13", "question": "How many uniform tops will I be given?", "answerable": true, "expected": [{"document": "new-starter-onboarding-guide.md", "section": "Uniform"}], "answer_contains": ["three polo shirts"]},
+
+    {"id": "n14", "question": "Am I allowed to go first class on the train?", "answerable": true, "expected": [{"document": "travel-and-expense-policy.md", "section": "Rail and air"}], "answer_contains": ["cheaper"]},
+    {"id": "n15", "question": "How much can I spend on lunch when I'm away at another site all day?", "answerable": true, "expected": [{"document": "travel-and-expense-policy.md", "section": "Meals while travelling"}], "answer_contains": ["£12"]},
+    {"id": "n16", "question": "I got a parking ticket while visiting another clinic. Will the company cover it?", "answerable": true, "expected": [{"document": "travel-and-expense-policy.md", "section": "Parking and tolls"}], "answer_contains": ["never reimbursed"]},
+    {"id": "n17", "question": "How long after I've paid for something can I still claim it back?", "answerable": true, "expected": [{"document": "travel-and-expense-policy.md", "section": "Deadline"}], "answer_contains": ["30 days"]},
+    {"id": "n18", "question": "What's the monthly spending limit on a company card?", "answerable": true, "expected": [{"document": "travel-and-expense-policy.md", "section": "Company payment cards"}], "answer_contains": ["£1,500"]},
+
+    {"id": "n19", "question": "Is there a day when the whole team is expected in the office?", "answerable": true, "expected": [{"document": "remote-and-hybrid-working-guidelines.txt", "section": "How much time can be worked remotely"}], "answer_contains": ["anchor day"]},
+    {"id": "n20", "question": "Can someone who has just joined work from home straight away?", "answerable": true, "expected": [{"document": "remote-and-hybrid-working-guidelines.txt", "section": "How much time can be worked remotely"}], "answer_contains": ["first four weeks"]},
+    {"id": "n21", "question": "When do I have to complete the home workstation assessment?", "answerable": true, "expected": [{"document": "remote-and-hybrid-working-guidelines.txt", "section": "Health and safety at home"}], "answer_contains": ["within two weeks"]},
+    {"id": "n22", "question": "Can my manager cancel my hybrid working arrangement?", "answerable": true, "expected": [{"document": "remote-and-hybrid-working-guidelines.txt", "section": "Changing or ending an arrangement"}], "answer_contains": ["four weeks' notice"]},
+
+    {"id": "n23", "question": "How long before my laptop locks itself if I walk away?", "answerable": true, "expected": [{"document": "information-security-policy.md", "section": "Laptops and phones"}], "answer_contains": ["five minutes"]},
+    {"id": "n24", "question": "How quickly do critical updates need installing?", "answerable": true, "expected": [{"document": "information-security-policy.md", "section": "Laptops and phones"}], "answer_contains": ["48 hours"]},
+    {"id": "n25", "question": "When does IT switch off the login of someone who is leaving?", "answerable": true, "expected": [{"document": "information-security-policy.md", "section": "Access to systems"}], "answer_contains": ["18:00"]},
+    {"id": "n26", "question": "Can I have my sign-in codes sent by text message?", "answerable": true, "expected": [{"document": "information-security-policy.md", "section": "Multi-factor authentication"}], "answer_contains": ["not supported"]},
+    {"id": "n27", "question": "Where am I supposed to store my work passwords?", "answerable": true, "expected": [{"document": "information-security-policy.md", "section": "Passwords"}], "answer_contains": ["KeyVault"]},
+
+    {"id": "n28", "question": "What number do I ring to reach IT support?", "answerable": true, "expected": [{"document": "it-service-desk-faq.html", "section": "How do I get help?"}], "answer_contains": ["4357"]},
+    {"id": "n29", "question": "How often do we get a new laptop?", "answerable": true, "expected": [{"document": "it-service-desk-faq.html", "section": "My laptop is slow or broken."}], "answer_contains": ["four years"]},
+    {"id": "n30", "question": "How far in advance should I ask IT for a laptop for someone joining my team?", "answerable": true, "expected": [{"document": "it-service-desk-faq.html", "section": "How do I order equipment for a new starter?"}], "answer_contains": ["10 working days"]},
+    {"id": "n31", "question": "How big can my mailbox get?", "answerable": true, "expected": [{"document": "it-service-desk-faq.html", "section": "How much email can I store?"}], "answer_contains": ["50 GB"]},
+
+    {"id": "n32", "question": "How long do we keep the HR file of someone who has left the company?", "answerable": true, "expected": [{"document": "records-retention-schedule.md", "section": "Staff records"}], "answer_contains": ["6 years"]},
+    {"id": "n33", "question": "A patient has asked for a copy of their notes. How long do we have to reply?", "answerable": true, "expected": [{"document": "records-retention-schedule.md", "section": "Requests from patients"}], "answer_contains": ["one month"]},
+    {"id": "n34", "question": "For how long are phone calls to the clinics kept on record?", "answerable": true, "expected": [{"document": "records-retention-schedule.md", "section": "Patient records"}], "answer_contains": ["90 days"]},
+
+    {"id": "n35", "question": "What time does the person opening the clinic have to be in?", "answerable": true, "expected": [{"document": "front-desk-sop.pdf", "section": "2.1 Before the doors open"}], "answer_contains": ["07:30"]},
+    {"id": "n36", "question": "Can a 14-year-old come to their appointment on their own?", "answerable": true, "expected": [{"document": "front-desk-sop.pdf", "section": "3.3 Children and patients who need support"}], "answer_contains": ["under 16"]},
+    {"id": "n37", "question": "How do I arrange an interpreter for a patient?", "answerable": true, "expected": [{"document": "front-desk-sop.pdf", "section": "3.3 Children and patients who need support"}], "answer_contains": ["48 hours"]},
+    {"id": "n38", "question": "What do I need to record for a patient whose insurance company is paying?", "answerable": true, "expected": [{"document": "front-desk-sop.pdf", "section": "5.2 Insurance-funded patients"}], "answer_contains": ["authorisation code"]},
+    {"id": "n39", "question": "Where does everyone gather when the fire alarm goes off?", "answerable": true, "expected": [{"document": "front-desk-sop.pdf", "section": "8.2 Fire alarm"}], "answer_contains": ["car park"]},
+
+    {"id": "n40", "question": "What do we charge someone who simply doesn't turn up?", "answerable": true, "expected": [{"document": "patient-cancellation-and-refund-policy.md", "section": "Missed appointments"}], "answer_contains": ["full price"]},
+    {"id": "n41", "question": "What does a patient get if we have to cancel on them at the last minute?", "answerable": true, "expected": [{"document": "patient-cancellation-and-refund-policy.md", "section": "If we cancel"}], "answer_contains": ["£10"]},
+    {"id": "n42", "question": "How long is a gift voucher valid for?", "answerable": true, "expected": [{"document": "patient-cancellation-and-refund-policy.md", "section": "Gift vouchers"}], "answer_contains": ["12 months"]},
+    {"id": "n43", "question": "How long does it take for a refund to reach the patient?", "answerable": true, "expected": [{"document": "patient-cancellation-and-refund-policy.md", "section": "How refunds are paid"}], "answer_contains": ["seven working days"]},
+
+    {"id": "n44", "question": "What do you get with the Active plan?", "answerable": true, "expected": [{"document": "care-plan-product-faq.md", "section": "What plans are there?"}], "answer_contains": ["2 follow-up sessions"]},
+    {"id": "n45", "question": "How much is a follow-up appointment for someone who isn't a member?", "answerable": true, "expected": [{"document": "care-plan-product-faq.md", "section": "What does a session cost without a plan?"}], "answer_contains": ["£48"]},
+    {"id": "n46", "question": "What does it cost to add my husband to my plan?", "answerable": true, "expected": [{"document": "care-plan-product-faq.md", "section": "Can family members be added?"}], "answer_contains": ["£25"]},
+    {"id": "n47", "question": "On what day of the month is the membership payment collected?", "answerable": true, "expected": [{"document": "care-plan-product-faq.md", "section": "How is the plan paid for?"}], "answer_contains": ["1st"]},
+    {"id": "n48", "question": "A member has broken her ankle and can't come in for a while. What are her options?", "answerable": true, "expected": [{"document": "care-plan-product-faq.md", "section": "What if a member cannot use the plan for medical reasons?"}], "answer_contains": ["three months"]},
+
+    {"id": "n49", "question": "Is there a deadline for making a complaint?", "answerable": true, "expected": [{"document": "complaints-handling-procedure.txt", "section": "Who can complain and when"}], "answer_contains": ["12 months"]},
+    {"id": "n50", "question": "How long does a patient have to ask for a review if they aren't happy with our reply?", "answerable": true, "expected": [{"document": "complaints-handling-procedure.txt", "section": "Stage 3: Independent review"}], "answer_contains": ["30 days"]},
+    {"id": "n51", "question": "How often does the board hear about complaints?", "answerable": true, "expected": [{"document": "complaints-handling-procedure.txt", "section": "Learning from complaints"}], "answer_contains": ["every quarter"]},
+
+    {"id": "x01", "question": "Can I bring my dog into the office on Fridays?", "answerable": false, "note": "Not covered."},
+    {"id": "x02", "question": "Am I allowed to have a second job alongside this one?", "answerable": false, "note": "Not covered."},
+    {"id": "x03", "question": "How much is the relocation allowance if I transfer to another clinic?", "answerable": false, "note": "A home-office allowance exists; relocation is not covered. Near miss."},
+    {"id": "x04", "question": "What is the procedure after a needlestick or sharps injury?", "answerable": false, "note": "Not covered."},
+    {"id": "x05", "question": "Do we get private medical insurance as a staff benefit?", "answerable": false, "note": "Insurance appears only in the context of patients and business travel."},
+    {"id": "x06", "question": "Which payroll software does Finance use?", "answerable": false, "note": "Payroll dates are covered, the software is not."},
+    {"id": "x07", "question": "What's the mileage rate for an electric company car?", "answerable": false, "note": "Only the rate for an employee's own car and for bicycles is given. Near miss."},
+    {"id": "x08", "question": "How many patients is each physio expected to see per day?", "answerable": false, "note": "Not covered."},
+    {"id": "x09", "question": "Who do I contact about a broken treatment couch?", "answerable": false, "note": "Not covered; the IT FAQ covers broken laptops and printers."},
+    {"id": "x10", "question": "How long do we keep patient X-ray images?", "answerable": false, "note": "The retention schedule has no entry for imaging. Near miss."},
+    {"id": "x11", "question": "Is there a student discount on physiotherapy sessions?", "answerable": false, "note": "Only a staff discount is described. Near miss."},
+    {"id": "x12", "question": "When is the next all-staff meeting?", "answerable": false, "note": "Not covered."}
+  ]
+}

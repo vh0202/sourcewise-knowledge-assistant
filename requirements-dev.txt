@@ -1,0 +1,24 @@
+# Development dependencies: tests, lint, the screenshot script and the sample-PDF generator.
+#
+#   .venv\Scripts\python -m pip install -r requirements-dev.txt    (Windows)
+#   .venv/bin/python -m pip install -r requirements-dev.txt        (macOS / Linux)
+
+-r requirements.txt
+
+# --- direct dependencies ---------------------------------------------------------------------
+pytest==9.2.0               # test runner
+httpx==0.28.1               # required by FastAPI's TestClient
+ruff==0.17.4                # linter
+playwright==1.65.0          # scripts/screenshots.py (drives the installed Google Chrome; no browser download)
+reportlab==5.1.0            # scripts/build_corpus_pdf.py (regenerates corpus/clinic-operations/front-desk-sop.pdf)
+
+# --- transitive dependencies (pinned for reproducible installs) --------------------------------
+certifi==2026.10.23
+charset-normalizer==3.5.2
+greenlet==3.5.6
+httpcore==1.0.9
+iniconfig==2.3.1
+packaging==26.3
+pillow==13.0.0
+pluggy==1.7.0
+Pygments==2.21.0

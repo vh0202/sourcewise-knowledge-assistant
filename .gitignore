@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Local runtime data (SQLite database and uploaded files are recreated by `python -m sourcewise seed`)
+data/
+
+# Secrets
+.env
+
+# Node
+frontend/node_modules/
+
+# NOTE: frontend/dist is intentionally committed so the app runs without Node.
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,255 @@
+/* Class names are collected from the sources only. Without this, Tailwind would also scan the
+   previous build in ../dist, and the output would depend on what was built before. */
+@import "tailwindcss" source(none);
+@source "./";
+@source "../index.html";
+@import "./styles/tokens.css";
+
+/* `dark:` follows the theme attribute (or a .theme-dark subtree), never the OS setting directly:
+   the bootstrap script in /theme-init.js resolves "system" to light or dark before first paint. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .theme-dark, .theme-dark *));
+
+/* A local fallback with Inter's metrics, so that text does not move when the web font arrives. */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  ascent-override: 90.2%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+  size-adjust: 107.4%;
+}
+
+@layer base {
+  /* Borders are hairlines in the line colour unless a utility says otherwise. */
+  *,
+  ::before,
+  ::after,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--line);
+  }
+  html {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss03", "calt";
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: var(--fg);
+    background: var(--canvas);
+    scrollbar-color: var(--line-strong) transparent;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+  .theme-light,
+  .theme-dark {
+    color: var(--fg);
+  }
+  /* While the theme is being switched, nothing animates: the whole interface changes at once. */
+  .theme-switching,
+  .theme-switching *,
+  .theme-switching *::before,
+  .theme-switching *::after {
+    transition: none !important;
+  }
+  * {
+    scrollbar-width: thin;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  mark {
+    color: inherit;
+    background: none;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--focus) 32%, transparent);
+  }
+  ::placeholder {
+    color: var(--fg-subtle);
+    opacity: 1;
+  }
+  dialog {
+    color: var(--fg);
+  }
+  dialog::backdrop {
+    background: rgb(16 16 24 / 0.4);
+    background: var(--scrim, rgb(16 16 24 / 0.4));
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    animation: fade-in 180ms var(--ease-standard);
+  }
+  /* Native selects: keep the control, replace the chrome. */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%237e7f8c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4.5 6.25 3.5 3.5 3.5-3.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.4rem center;
+    background-size: 1rem;
+  }
+}
+
+@layer components {
+  /* -- Citations ------------------------------------------------------------------------------ */
+  /* The inline citation marker: a numbered gold chip. Gold appears nowhere else in the UI. */
+  .citation-chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.125rem;
+    height: 1.125rem;
+    margin: 0 0.125rem;
+    padding: 0 0.3rem;
+    border-radius: 0.3125rem;
+    background: var(--cite);
+    color: var(--cite-fg);
+    box-shadow: inset 0 0 0 1px var(--cite-line);
+    font-size: 0.6875rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    vertical-align: 0.14em;
+    user-select: none;
+    transition:
+      background-color 150ms var(--ease-standard),
+      color 150ms var(--ease-standard),
+      box-shadow 150ms var(--ease-standard),
+      transform 150ms var(--ease-standard);
+  }
+  button.citation-chip:hover {
+    background: var(--cite-hover);
+    transform: translateY(-1px);
+  }
+  button.citation-chip:active {
+    transform: translateY(0);
+  }
+  .citation-chip[aria-pressed="true"] {
+    background: var(--cite-solid);
+    color: var(--cite-solid-fg);
+    box-shadow:
+      inset 0 0 0 1px var(--mark-line),
+      0 0 0 3px var(--cite);
+  }
+
+  /* The cited text inside a passage: a highlighter stroke plus an underline, so that the
+     highlight does not depend on colour alone. */
+  .cite-mark {
+    margin: 0 -0.12em;
+    padding: 0.12em;
+    border-radius: 0.1875rem;
+    background: var(--mark);
+    color: var(--mark-fg);
+    box-shadow: inset 0 -2px 0 var(--mark-line);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .cite-mark[data-pulse="true"] {
+    animation: var(--animate-mark);
+  }
+
+  /* -- Chunk inspector ------------------------------------------------------------------------ */
+  /* Text shared by two consecutive chunks. */
+  .overlap-text {
+    margin: 0 -0.12em;
+    padding: 0.12em;
+    border-radius: 0.1875rem;
+    background-color: var(--accent-soft);
+    background-image: repeating-linear-gradient(135deg, var(--accent-soft-strong) 0 5px, transparent 5px 10px);
+    box-shadow: inset 0 -1px 0 var(--accent-line);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  /* The same idea on a filled block of the document map. */
+  .overlap-hatch {
+    background-image: repeating-linear-gradient(135deg, rgb(255 255 255 / 0.62) 0 3px, transparent 3px 6px);
+  }
+
+  /* -- Loading -------------------------------------------------------------------------------- */
+  .skeleton {
+    border-radius: var(--radius-sm);
+    background-color: var(--wash);
+    background-image: linear-gradient(90deg, transparent 25%, var(--wash-strong) 45%, transparent 65%);
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+
+  /* -- Sign-in brand panel -------------------------------------------------------------------- */
+  .brand-mesh {
+    background-color: #0c0a1f;
+    background-image:
+      radial-gradient(62% 52% at 10% 6%, rgb(99 79 224 / 0.62) 0%, transparent 62%),
+      radial-gradient(46% 42% at 96% 14%, rgb(64 47 154 / 0.7) 0%, transparent 64%),
+      radial-gradient(54% 48% at 82% 100%, rgb(128 118 250 / 0.3) 0%, transparent 62%),
+      radial-gradient(40% 34% at 14% 96%, rgb(249 188 44 / 0.1) 0%, transparent 66%);
+  }
+  .brand-grid {
+    background-image: radial-gradient(rgb(255 255 255 / 0.14) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(70% 60% at 60% 40%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(70% 60% at 60% 40%, #000 0%, transparent 78%);
+  }
+
+  /* -- Drawers ------------------------------------------------------------------------------- */
+  /* Entry animations do not keep their final transform, so tooltips inside a drawer are
+     positioned against the viewport once it has arrived. */
+  .drawer-enter-left {
+    animation: slide-left 240ms var(--ease-out);
+  }
+  .drawer-enter-right {
+    animation: slide-in-right 240ms var(--ease-out);
+  }
+  .drawer-enter-bottom {
+    animation: slide-up 260ms var(--ease-out);
+  }
+  .drawer-exit-left {
+    animation: slide-left-out 180ms var(--ease-standard) forwards;
+  }
+  .drawer-exit-right {
+    animation: slide-right-out 180ms var(--ease-standard) forwards;
+  }
+  .drawer-exit-bottom {
+    animation: slide-down-out 180ms var(--ease-standard) forwards;
+  }
+  dialog[data-closing]::backdrop {
+    animation: fade-out 180ms var(--ease-standard) forwards;
+  }
+
+  /* -- Scroll affordances --------------------------------------------------------------------- */
+  .fade-mask-y {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%);
+  }
+}
+
+/* Reduced motion: nothing moves. Transitions are removed outright; animations jump to their end
+   state (they all animate from a starting pose to the element's own style) and do not repeat. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

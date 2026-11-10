@@ -1,0 +1,851 @@
+{
+  "description": "Development set (71 questions). Used while building the offline pipeline and to choose its abstention rule and thresholds. It has two parts: 22 short, keyword-style questions (ids d*/u*) written first, and 49 conversational questions (ids g*/a*) that were originally drafted as the golden set. The first run on those 49 showed that an abstention threshold chosen on keyword-style questions wrongly declined most conversational ones, so they were demoted to development data and a new golden set was written and frozen before the redesign (see eval/README.md). Reported results come from golden_set.json, which was not used for tuning.",
+  "questions": [
+    {
+      "id": "d01",
+      "question": "How long is the probation period?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Probation and notice"
+        }
+      ],
+      "answer_contains": [
+        "six months"
+      ]
+    },
+    {
+      "id": "d02",
+      "question": "Can I swap a shift with a colleague?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Swapping shifts"
+        }
+      ],
+      "answer_contains": [
+        "48 hours"
+      ]
+    },
+    {
+      "id": "d03",
+      "question": "How many study days do clinicians get?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Study leave"
+        }
+      ],
+      "answer_contains": [
+        "three paid study days"
+      ]
+    },
+    {
+      "id": "d04",
+      "question": "What is the meal allowance for dinner when travelling?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Meals while travelling"
+        }
+      ],
+      "answer_contains": [
+        "£25"
+      ]
+    },
+    {
+      "id": "d05",
+      "question": "When are expense claims reimbursed?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "When you are paid"
+        }
+      ],
+      "answer_contains": [
+        "25th"
+      ]
+    },
+    {
+      "id": "d06",
+      "question": "Is multi-factor authentication required for email?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Multi-factor authentication"
+        }
+      ],
+      "answer_contains": [
+        "mandatory"
+      ]
+    },
+    {
+      "id": "d07",
+      "question": "How do I report a phishing email?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Email and phishing"
+        }
+      ],
+      "answer_contains": [
+        "Report Phish"
+      ]
+    },
+    {
+      "id": "d08",
+      "question": "How long are system backups kept?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "records-retention-schedule.md",
+          "section": "Systems and backups"
+        }
+      ],
+      "answer_contains": [
+        "35 days"
+      ]
+    },
+    {
+      "id": "d09",
+      "question": "What happens if a patient misses two appointments?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "patient-cancellation-and-refund-policy.md",
+          "section": "Missed appointments"
+        }
+      ],
+      "answer_contains": [
+        "paid for in advance"
+      ]
+    },
+    {
+      "id": "d10",
+      "question": "How old do you have to be to join the Care Plan?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "care-plan-product-faq.md",
+          "section": "Is there a plan for under-18s?"
+        }
+      ],
+      "answer_contains": [
+        "16 or over"
+      ]
+    },
+    {
+      "id": "d11",
+      "question": "Who carries out the independent review of a complaint?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "complaints-handling-procedure.txt",
+          "section": "Stage 3: Independent review"
+        }
+      ],
+      "answer_contains": [
+        "director"
+      ]
+    },
+    {
+      "id": "d12",
+      "question": "How often is cash banked?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "9. Closing the clinic"
+        }
+      ],
+      "answer_contains": [
+        "Tuesday and Friday"
+      ]
+    },
+    {
+      "id": "d13",
+      "question": "What are the core hours when working from home?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "remote-and-hybrid-working-guidelines.txt",
+          "section": "Core hours and availability"
+        }
+      ],
+      "answer_contains": [
+        "10:00 and 15:00"
+      ]
+    },
+    {
+      "id": "d14",
+      "question": "How long does the VPN stay connected?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "it-service-desk-faq.html",
+          "section": "How do I connect to the VPN?"
+        }
+      ],
+      "answer_contains": [
+        "12 hours"
+      ]
+    },
+    {
+      "id": "u01",
+      "question": "Is there staff parking at the Rookfield clinic?",
+      "answerable": false
+    },
+    {
+      "id": "u02",
+      "question": "Is there dental insurance for employees?",
+      "answerable": false
+    },
+    {
+      "id": "u03",
+      "question": "Do we have a cycle to work scheme?",
+      "answerable": false
+    },
+    {
+      "id": "u04",
+      "question": "What is the bonus scheme for clinic managers?",
+      "answerable": false
+    },
+    {
+      "id": "u05",
+      "question": "How do I claim childcare vouchers?",
+      "answerable": false
+    },
+    {
+      "id": "u06",
+      "question": "What is the dress code for the Christmas party?",
+      "answerable": false
+    },
+    {
+      "id": "u07",
+      "question": "Which bank does the company use for payroll?",
+      "answerable": false
+    },
+    {
+      "id": "u08",
+      "question": "How many treatment rooms does the Pennybridge clinic have?",
+      "answerable": false
+    },
+    {
+      "id": "g01",
+      "question": "How many holiday days do I get a year?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Annual leave"
+        }
+      ],
+      "answer_contains": [
+        "25 days"
+      ]
+    },
+    {
+      "id": "g02",
+      "question": "I'm off sick tomorrow - who do I need to tell and by when?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Sickness absence"
+        }
+      ],
+      "answer_contains": [
+        "08:00"
+      ]
+    },
+    {
+      "id": "g03",
+      "question": "How much notice do I have to give if I resign after my probation?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Probation and notice"
+        }
+      ],
+      "answer_contains": [
+        "one month"
+      ]
+    },
+    {
+      "id": "g04",
+      "question": "What happens to holiday I haven't taken by the end of December?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Annual leave"
+        }
+      ],
+      "answer_contains": [
+        "31 March"
+      ]
+    },
+    {
+      "id": "g05",
+      "question": "A patient gave me a bottle of wine worth about £40 as a thank you. Am I allowed to keep it?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Gifts and hospitality"
+        }
+      ],
+      "answer_contains": [
+        "£25"
+      ]
+    },
+    {
+      "id": "g06",
+      "question": "What percentage does the employer put into my pension?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Pension"
+        }
+      ],
+      "answer_contains": [
+        "5%"
+      ]
+    },
+    {
+      "id": "g07",
+      "question": "How long is paternity leave and is it paid?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "employee-handbook.md",
+          "section": "Parental leave"
+        }
+      ],
+      "answer_contains": [
+        "two weeks"
+      ]
+    },
+    {
+      "id": "g08",
+      "question": "Where do I go on my first morning and what time?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "new-starter-onboarding-guide.md",
+          "section": "Your first day"
+        }
+      ],
+      "answer_contains": [
+        "09:30"
+      ]
+    },
+    {
+      "id": "g09",
+      "question": "When will I get my first pay if I join on the 15th?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "new-starter-onboarding-guide.md",
+          "section": "Getting paid for the first time"
+        }
+      ],
+      "answer_contains": [
+        "25th of the following month"
+      ]
+    },
+    {
+      "id": "g10",
+      "question": "How many shifts do new receptionists shadow before working on their own?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "new-starter-onboarding-guide.md",
+          "section": "Learning the systems"
+        }
+      ],
+      "answer_contains": [
+        "two shadow shifts"
+      ]
+    },
+    {
+      "id": "g11",
+      "question": "What's the most I can spend on a hotel room?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Hotels"
+        }
+      ],
+      "answer_contains": [
+        "£120"
+      ]
+    },
+    {
+      "id": "g12",
+      "question": "How much can I claim per mile when I drive my own car to another clinic?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Driving"
+        }
+      ],
+      "answer_contains": [
+        "45p"
+      ]
+    },
+    {
+      "id": "g13",
+      "question": "Do I need to keep receipts for small purchases?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Receipts"
+        }
+      ],
+      "answer_contains": [
+        "£10"
+      ]
+    },
+    {
+      "id": "g14",
+      "question": "Who has to sign off an expense claim of £600?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Approval limits"
+        }
+      ],
+      "answer_contains": [
+        "Head of department"
+      ]
+    },
+    {
+      "id": "g15",
+      "question": "Can I get a taxi home after a late training session?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "travel-and-expense-policy.md",
+          "section": "Taxis"
+        }
+      ],
+      "answer_contains": [
+        "21:00"
+      ]
+    },
+    {
+      "id": "g16",
+      "question": "How many days a week can I work from home?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "remote-and-hybrid-working-guidelines.txt",
+          "section": "How much time can be worked remotely"
+        }
+      ],
+      "answer_contains": [
+        "two days"
+      ]
+    },
+    {
+      "id": "g17",
+      "question": "Will the company pay for a desk for my home office?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "remote-and-hybrid-working-guidelines.txt",
+          "section": "Equipment"
+        }
+      ],
+      "answer_contains": [
+        "150 pounds"
+      ]
+    },
+    {
+      "id": "g18",
+      "question": "I'd like to work from Spain for two weeks this summer - is that allowed?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "remote-and-hybrid-working-guidelines.txt",
+          "section": "Working from another country"
+        }
+      ],
+      "answer_contains": [
+        "10 working days"
+      ]
+    },
+    {
+      "id": "g19",
+      "question": "What's the minimum password length?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Passwords"
+        }
+      ],
+      "answer_contains": [
+        "14 characters"
+      ]
+    },
+    {
+      "id": "g20",
+      "question": "I left my work laptop on the train. What should I do?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Lost or stolen devices"
+        }
+      ],
+      "answer_contains": [
+        "within one hour"
+      ]
+    },
+    {
+      "id": "g21",
+      "question": "Can I copy files onto a USB stick?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Removable media"
+        }
+      ],
+      "answer_contains": [
+        "blocked"
+      ]
+    },
+    {
+      "id": "g22",
+      "question": "Is it OK to paste patient notes into an online AI chatbot?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "information-security-policy.md",
+          "section": "Software and cloud services"
+        }
+      ],
+      "answer_contains": [
+        "unless IT has approved"
+      ]
+    },
+    {
+      "id": "g23",
+      "question": "What are the IT helpdesk opening times on a Saturday?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "it-service-desk-faq.html",
+          "section": "When is the Service Desk open?"
+        }
+      ],
+      "answer_contains": [
+        "08:00 to 13:00"
+      ]
+    },
+    {
+      "id": "g24",
+      "question": "How fast will IT respond if the whole clinic can't take card payments?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "it-service-desk-faq.html",
+          "section": "How quickly will my ticket be handled?"
+        }
+      ],
+      "answer_contains": [
+        "15 minutes"
+      ]
+    },
+    {
+      "id": "g25",
+      "question": "What's the guest wifi called and where do I find the password?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "it-service-desk-faq.html",
+          "section": "Which Wi-Fi network should I use?"
+        }
+      ],
+      "answer_contains": [
+        "Calderwick-Guest"
+      ]
+    },
+    {
+      "id": "g26",
+      "question": "How long do we hold on to CCTV recordings?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "records-retention-schedule.md",
+          "section": "Patient records"
+        }
+      ],
+      "answer_contains": [
+        "30 days"
+      ]
+    },
+    {
+      "id": "g27",
+      "question": "When can we delete the file of someone who applied for a job but wasn't hired?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "records-retention-schedule.md",
+          "section": "Staff records"
+        }
+      ],
+      "answer_contains": [
+        "6 months"
+      ]
+    },
+    {
+      "id": "g28",
+      "question": "What details do I ask for to confirm who a patient is at check-in?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "3.1 Greeting and identification"
+        }
+      ],
+      "answer_contains": [
+        "date of birth"
+      ]
+    },
+    {
+      "id": "g29",
+      "question": "What's the largest cash payment reception can accept?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "5.1 Payment methods"
+        }
+      ],
+      "answer_contains": [
+        "£200"
+      ]
+    },
+    {
+      "id": "g30",
+      "question": "Someone on the phone says their back pain has got much worse - can I advise them?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "6. Telephone calls and messages"
+        }
+      ],
+      "answer_contains": [
+        "duty physiotherapist"
+      ]
+    },
+    {
+      "id": "g31",
+      "question": "What time does the last person have to be out of the building at night?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "9. Closing the clinic"
+        }
+      ],
+      "answer_contains": [
+        "20:15"
+      ]
+    },
+    {
+      "id": "g32",
+      "question": "How much do we charge if a patient cancels the same morning?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "patient-cancellation-and-refund-policy.md",
+          "section": "Late cancellations"
+        }
+      ],
+      "answer_contains": [
+        "50%"
+      ]
+    },
+    {
+      "id": "g33",
+      "question": "A customer wants to return an unopened knee brace they bought three weeks ago. Can they get their money back?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "patient-cancellation-and-refund-policy.md",
+          "section": "Products"
+        }
+      ],
+      "answer_contains": [
+        "28 days"
+      ]
+    },
+    {
+      "id": "g34",
+      "question": "Up to what amount can I refund a patient myself without asking the manager?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "patient-cancellation-and-refund-policy.md",
+          "section": "Who can approve a refund"
+        },
+        {
+          "document": "front-desk-sop.pdf",
+          "section": "5.3 Refunds at the desk"
+        }
+      ],
+      "answer_contains": [
+        "£60"
+      ]
+    },
+    {
+      "id": "g35",
+      "question": "What does the cheapest membership cost and what do you get?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "care-plan-product-faq.md",
+          "section": "What plans are there?"
+        }
+      ],
+      "answer_contains": [
+        "£39"
+      ]
+    },
+    {
+      "id": "g36",
+      "question": "Can a member put their plan on hold while they travel for a couple of months?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "care-plan-product-faq.md",
+          "section": "Can a member pause the plan?"
+        }
+      ],
+      "answer_contains": [
+        "one or two whole months"
+      ]
+    },
+    {
+      "id": "g37",
+      "question": "How much notice is needed to cancel a Care Plan?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "care-plan-product-faq.md",
+          "section": "How does a member cancel?"
+        }
+      ],
+      "answer_contains": [
+        "30 days"
+      ]
+    },
+    {
+      "id": "g38",
+      "question": "How long do we have to send the full written reply to a formal complaint?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "complaints-handling-procedure.txt",
+          "section": "Stage 2: Formal investigation"
+        }
+      ],
+      "answer_contains": [
+        "20 working days"
+      ]
+    },
+    {
+      "id": "g39",
+      "question": "How much compensation can a clinic manager offer to settle a complaint informally?",
+      "answerable": true,
+      "expected": [
+        {
+          "document": "complaints-handling-procedure.txt",
+          "section": "Stage 1: Local resolution"
+        }
+      ],
+      "answer_contains": [
+        "75 pounds"
+      ]
+    },
+    {
+      "id": "a01",
+      "question": "What is the staff discount at the gym next door to the Eastmere clinic?",
+      "answerable": false,
+      "note": "No gym is mentioned; a staff treatment discount is, which makes this a near miss."
+    },
+    {
+      "id": "a02",
+      "question": "How do I book the company minibus for a team outing?",
+      "answerable": false,
+      "note": "No vehicles or team outings in the corpus."
+    },
+    {
+      "id": "a03",
+      "question": "What is our policy on bringing pets or assistance dogs into the clinic?",
+      "answerable": false,
+      "note": "Not covered."
+    },
+    {
+      "id": "a04",
+      "question": "Which health insurers do we have direct billing agreements with?",
+      "answerable": false,
+      "note": "Insurer-funded treatment is discussed, but no insurer is named."
+    },
+    {
+      "id": "a05",
+      "question": "How much is the Christmas bonus this year?",
+      "answerable": false,
+      "note": "No bonus scheme in the corpus."
+    },
+    {
+      "id": "a06",
+      "question": "How many days of paid leave do I get for jury service?",
+      "answerable": false,
+      "note": "Several kinds of leave are covered, jury service is not."
+    },
+    {
+      "id": "a07",
+      "question": "Who is the chief executive of Calderwick Health?",
+      "answerable": false,
+      "note": "No named individuals in the corpus."
+    },
+    {
+      "id": "a08",
+      "question": "What are the opening hours of the staff canteen?",
+      "answerable": false,
+      "note": "No canteen; clinic and Service Desk opening hours exist, a near miss."
+    },
+    {
+      "id": "a09",
+      "question": "Does the Care Plan include massage therapy or acupuncture?",
+      "answerable": false,
+      "note": "The plan contents are listed and do not mention either."
+    },
+    {
+      "id": "a10",
+      "question": "What is the maximum number of sessions an insurer will fund per year?",
+      "answerable": false,
+      "note": "Insurer authorisation is mentioned, limits are not."
+    }
+  ]
+}

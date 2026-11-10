@@ -1,0 +1,62 @@
+Complaints Handling Procedure
+=============================
+
+Calderwick Health - Operations - Version 2.0 - Effective 1 June 2025
+
+Purpose
+-------
+
+We want to hear when something has gone wrong so that we can put it right and learn from it. This procedure explains how complaints from patients and members of the public are received, investigated and answered. It does not cover complaints from employees, which are handled under the grievance procedure.
+
+Who can complain and when
+-------------------------
+
+A complaint can be made by a patient, by someone acting for a patient with their consent, or by anyone affected by the actions of a Calderwick clinic. A complaint should be made within 12 months of the event, or within 12 months of the person becoming aware of it. The Head of Operations may accept a later complaint if it is still possible to investigate it fairly.
+
+How complaints are received
+---------------------------
+
+Complaints can be made in person, by telephone, by letter or by email to complaints@example.com. Whoever receives a complaint records it in the complaints log in ClinicDesk on the same working day, even if it was resolved on the spot. A verbal complaint is written down and read back to the person to confirm that it is accurate.
+
+Stage 1: Local resolution
+-------------------------
+
+The clinic manager tries to resolve the complaint informally, normally by speaking to the person who complained. The aim is to resolve a Stage 1 complaint within 5 working days. The clinic manager may offer an apology, a repeat appointment free of charge or a goodwill payment of up to 75 pounds.
+
+Stage 2: Formal investigation
+-----------------------------
+
+If the person is not satisfied, or the complaint is too serious for local resolution, it moves to Stage 2. The complaint is acknowledged in writing within 2 working days. The Head of Operations appoints an investigator who was not involved in the events. A full written response is sent within 20 working days of the acknowledgement. If more time is needed, the person is told why and is given an update at least every 10 working days.
+
+A Stage 2 response always contains:
+
+- a summary of the complaint as we understood it
+- what the investigation found
+- an apology where one is due
+- what will change as a result
+- how to ask for a review
+
+Stage 3: Independent review
+---------------------------
+
+A person who remains dissatisfied may ask for a review within 30 days of the Stage 2 response. The review is carried out by a director who has had no previous involvement in the complaint, and the outcome is sent within 25 working days. This is the final stage of the Calderwick procedure. The response explains how to take the matter to the relevant external ombudsman.
+
+Complaints involving a clinician's fitness to practise
+------------------------------------------------------
+
+A complaint that raises doubt about a clinician's fitness to practise is reported to the Clinical Director on the day it is received. The Clinical Director decides within 3 working days whether the clinician's regulator must be informed.
+
+Confidentiality and fair treatment
+----------------------------------
+
+Making a complaint never affects the care a patient receives. Complaint records are kept separately from clinical records and are seen only by the people handling the complaint. Staff named in a complaint are told about it and are given the chance to respond.
+
+Learning from complaints
+------------------------
+
+Every upheld complaint has at least one recorded action. The Head of Operations reports complaint numbers, themes and completed actions to the board every quarter, and clinic managers share the lessons at their next team meeting.
+
+Contact
+-------
+
+Complaints team: complaints@example.com

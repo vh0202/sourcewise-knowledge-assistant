@@ -1,0 +1,547 @@
+/*
+ * SourceWise design tokens: the single source of truth for colour, type, radius, elevation
+ * and motion. Components never use raw colours; they use the semantic names declared at the
+ * bottom of this file (bg-surface, text-fg-muted, border-line, ...), which Tailwind turns into
+ * utilities that read the custom properties below at run time. Switching theme is therefore
+ * one attribute on <html> (data-theme="light" | "dark"), and any subtree can opt into a theme
+ * with the .theme-light / .theme-dark classes.
+ *
+ * Identity: an indigo-violet accent ("iris"), a cool neutral scale with a trace of the same
+ * hue, and one warm colour ("gold") that is reserved for citations and the cited passage.
+ * Every text/background pair used by the interface meets WCAG AA (4.5:1) in both themes.
+ */
+
+/* -- Primitives: ramps generated in OKLCH so that steps are perceptually even ----------------- */
+:root {
+  --neutral-0: #ffffff;
+  --neutral-25: #fcfcfd;
+  --neutral-50: #f8f8fb;
+  --neutral-100: #f2f2f6;
+  --neutral-150: #ebebf1;
+  --neutral-200: #e3e3eb;
+  --neutral-300: #d2d3dc;
+  --neutral-400: #a7a8b4;
+  --neutral-500: #7e7f8c;
+  --neutral-600: #5e5f6d;
+  --neutral-700: #42424f;
+  --neutral-800: #2b2b36;
+  --neutral-850: #20212a;
+  --neutral-900: #181820;
+  --neutral-925: #121219;
+  --neutral-950: #0c0d12;
+  --neutral-975: #08080c;
+
+  --iris-50: #f6f7ff;
+  --iris-100: #ecedff;
+  --iris-200: #dbdcff;
+  --iris-300: #c2c4fe;
+  --iris-400: #a1a0ff;
+  --iris-500: #8076fa;
+  --iris-600: #634fe0;
+  --iris-700: #523bc3;
+  --iris-800: #402f9a;
+  --iris-900: #312873;
+  --iris-950: #1d1749;
+
+  --gold-50: #fffae8;
+  --gold-100: #fff2c6;
+  --gold-200: #ffe49c;
+  --gold-300: #ffd162;
+  --gold-400: #f9bc2c;
+  --gold-500: #eda40e;
+  --gold-600: #cd7d0a;
+  --gold-700: #a85a03;
+  --gold-800: #854408;
+  --gold-900: #693609;
+  --gold-950: #411f03;
+
+  --green-50: #ecfbf2;
+  --green-200: #b0efcc;
+  --green-400: #4ad496;
+  --green-500: #23b374;
+  --green-600: #0d9159;
+  --green-700: #057345;
+
+  --red-50: #fff2f2;
+  --red-200: #ffcdca;
+  --red-400: #f97772;
+  --red-500: #eb4441;
+  --red-600: #d62526;
+  --red-700: #b31c1e;
+
+  --orange-50: #fff7f0;
+  --orange-200: #ffd9bd;
+  --orange-400: #fd9c5d;
+  --orange-500: #f0772d;
+  --orange-700: #aa4515;
+
+  --teal-500: #0d9db2;
+  --teal-700: #05697c;
+}
+
+/* -- Semantic tokens: light ------------------------------------------------------------------- */
+:root,
+.theme-light {
+  color-scheme: light;
+
+  /* Surfaces, from the back of the stack to the front. */
+  --canvas: #f5f5f9; /* behind everything: sidebar, page chrome */
+  --surface: #ffffff; /* the main sheet, panels */
+  --sunken: #f8f8fb; /* wells: table heads, the document viewer backdrop */
+  --card: #ffffff; /* cards on a surface */
+  --raised: #ffffff; /* menus, popovers, dialogs, toasts */
+  --inverse: #181820; /* tooltips */
+  --wash: rgb(24 24 32 / 0.045); /* hover */
+  --wash-strong: rgb(24 24 32 / 0.08); /* pressed, selected */
+  --bubble: #efeff5; /* the user's message */
+  --control: #ffffff; /* secondary buttons, inputs */
+  --control-hover: #f5f5f9;
+  --thumb: #ffffff; /* the selected item in a list or segmented control */
+  --scrim: rgb(16 16 24 / 0.36); /* behind dialogs and drawers */
+
+  /* Hairlines. */
+  --line: #e7e7ee;
+  --line-strong: #d4d5de;
+  --line-faint: #eff0f4;
+
+  /* Text. "subtle" is the lightest step that still meets 4.5:1 on every surface above. */
+  --fg: #181820;
+  --fg-muted: #5e5f6d;
+  --fg-subtle: #6b6c7a;
+  --fg-faint: #a7a8b4; /* disabled text and decorative glyphs only */
+  --fg-inverse: #f2f2f6;
+
+  /* Accent family. */
+  --accent: #634fe0;
+  --accent-hover: #5943d4;
+  --accent-strong: #523bc3;
+  --accent-fg: #523bc3; /* accent-coloured text and icons on a surface */
+  --accent-soft: #f6f7ff;
+  --accent-soft-strong: #ecedff;
+  --accent-line: #dbdcff;
+  --on-accent: #ffffff;
+  --focus: #8076fa;
+
+  /* Citations: the only warm colour in the interface. */
+  --cite: #fff2c6;
+  --cite-hover: #ffe49c;
+  --cite-line: #f6cf6c;
+  --cite-fg: #693609;
+  --cite-solid: #f9bc2c;
+  --cite-solid-fg: #411f03;
+  --mark: #ffe9a8;
+  --mark-fg: #181820;
+  --mark-line: #f0b429;
+  --mark-glow: rgb(249 188 44 / 0.55);
+
+  /* Status. */
+  --success: #0d9159;
+  --success-fg: #057345;
+  --success-soft: #ecfbf2;
+  --success-line: #b0efcc;
+  --danger: #d62526;
+  --danger-hover: #c11f20;
+  --danger-fg: #b31c1e;
+  --danger-soft: #fff2f2;
+  --danger-line: #ffcdca;
+  --warning-fg: #aa4515;
+  --warning-soft: #fff7f0;
+  --warning-line: #ffd9bd;
+
+  /* Charts: two categorical series validated for colour-vision deficiency and contrast. */
+  --series-1: #634fe0;
+  --series-2: #0d9db2;
+  --series-1-soft: #e4e5ff;
+  --chart-grid: #ebebf1;
+  --chart-axis: #d2d3dc;
+
+  /* File types: label bands that carry white text (each at least 4.5:1). */
+  --file-pdf: #d62526;
+  --file-md: #634fe0;
+  --file-html: #aa4515;
+  --file-txt: #5e5f6d;
+  --file-page: #ffffff;
+  --file-edge: #c9cad5;
+
+  /* Elevation: layered, soft, tinted with the neutral hue. */
+  --elev-ring: 0 0 0 1px rgb(24 24 32 / 0.05);
+  --elev-xs: 0 1px 2px rgb(24 24 32 / 0.05);
+  --elev-sm: 0 1px 2px rgb(24 24 32 / 0.06), 0 2px 6px -1px rgb(24 24 32 / 0.05);
+  --elev-md: 0 2px 4px -1px rgb(24 24 32 / 0.06), 0 8px 20px -6px rgb(24 24 32 / 0.12);
+  --elev-lg: 0 4px 10px -2px rgb(24 24 32 / 0.07), 0 18px 40px -10px rgb(24 24 32 / 0.18);
+  --elev-xl: 0 8px 18px -6px rgb(24 24 32 / 0.1), 0 36px 72px -18px rgb(24 24 32 / 0.28);
+  --elev-sheet: 0 1px 2px rgb(24 24 32 / 0.04), 0 4px 16px -8px rgb(24 24 32 / 0.08);
+  --elev-button: inset 0 1px 0 rgb(255 255 255 / 0.2), 0 1px 2px rgb(49 40 115 / 0.32), 0 0 0 1px var(--accent-strong);
+  --elev-button-danger: inset 0 1px 0 rgb(255 255 255 / 0.18), 0 1px 2px rgb(120 20 20 / 0.3), 0 0 0 1px var(--danger-hover);
+  --elev-control: 0 1px 2px rgb(24 24 32 / 0.05), 0 0 0 1px var(--line-strong);
+  --elev-focus: 0 0 0 1px var(--accent), 0 0 0 4px rgb(128 118 250 / 0.22);
+  --elev-composer: var(--elev-md), 0 0 0 1px var(--line-strong);
+  --elev-composer-focus: var(--elev-md), var(--elev-focus);
+}
+
+/* -- Semantic tokens: dark -------------------------------------------------------------------- */
+:root[data-theme="dark"],
+.theme-dark {
+  color-scheme: dark;
+
+  --canvas: #08080c;
+  --surface: #0f0f15;
+  --sunken: #0a0b10;
+  --card: #15161d;
+  --raised: #1b1c24;
+  --inverse: #2c2d38;
+  --wash: rgb(255 255 255 / 0.05);
+  --wash-strong: rgb(255 255 255 / 0.09);
+  --bubble: #202026;
+  --control: rgb(255 255 255 / 0.06);
+  --control-hover: rgb(255 255 255 / 0.1);
+  --thumb: rgb(255 255 255 / 0.1);
+  --scrim: rgb(0 0 0 / 0.6);
+
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.14);
+  --line-faint: rgb(255 255 255 / 0.05);
+
+  --fg: #eeeef2;
+  --fg-muted: #a7a8b4;
+  --fg-subtle: #8f909c;
+  --fg-faint: #5e5f6d;
+  --fg-inverse: #f2f2f6;
+
+  --accent: #634fe0;
+  --accent-hover: #6f5ce8;
+  --accent-strong: #7868ee;
+  --accent-fg: #a1a0ff;
+  --accent-soft: rgb(128 118 250 / 0.14);
+  --accent-soft-strong: rgb(128 118 250 / 0.22);
+  --accent-line: rgb(161 160 255 / 0.28);
+  --on-accent: #ffffff;
+  --focus: #a1a0ff;
+
+  --cite: rgb(249 188 44 / 0.15);
+  --cite-hover: rgb(249 188 44 / 0.26);
+  --cite-line: rgb(249 188 44 / 0.38);
+  --cite-fg: #ffd162;
+  --cite-solid: #f9bc2c;
+  --cite-solid-fg: #411f03;
+  --mark: rgb(249 188 44 / 0.22);
+  --mark-fg: #fff6da;
+  --mark-line: #e0a21a;
+  --mark-glow: rgb(249 188 44 / 0.5);
+
+  --success: #23b374;
+  --success-fg: #4ad496;
+  --success-soft: rgb(35 179 116 / 0.14);
+  --success-line: rgb(74 212 150 / 0.28);
+  --danger: #d62526;
+  --danger-hover: #c11f20;
+  --danger-fg: #f97772;
+  --danger-soft: rgb(235 68 65 / 0.14);
+  --danger-line: rgb(249 119 114 / 0.3);
+  --warning-fg: #fd9c5d;
+  --warning-soft: rgb(240 119 45 / 0.14);
+  --warning-line: rgb(253 156 93 / 0.3);
+
+  --series-1: #8076fa;
+  --series-2: #0d9db2;
+  --series-1-soft: rgb(128 118 250 / 0.24);
+  --chart-grid: rgb(255 255 255 / 0.07);
+  --chart-axis: rgb(255 255 255 / 0.18);
+
+  --file-page: #20212a;
+  --file-edge: #4a4b59;
+
+  --elev-ring: 0 0 0 1px rgb(255 255 255 / 0.06);
+  --elev-xs: 0 1px 2px rgb(0 0 0 / 0.4);
+  --elev-sm: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 6px -1px rgb(0 0 0 / 0.3);
+  --elev-md: 0 2px 4px -1px rgb(0 0 0 / 0.4), 0 8px 20px -6px rgb(0 0 0 / 0.5);
+  --elev-lg: 0 4px 10px -2px rgb(0 0 0 / 0.45), 0 18px 40px -10px rgb(0 0 0 / 0.6);
+  --elev-xl: 0 8px 18px -6px rgb(0 0 0 / 0.5), 0 36px 72px -18px rgb(0 0 0 / 0.7);
+  --elev-sheet: 0 1px 2px rgb(0 0 0 / 0.5);
+  --elev-button: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 1px 2px rgb(0 0 0 / 0.5), 0 0 0 1px var(--accent-strong);
+  --elev-button-danger: inset 0 1px 0 rgb(255 255 255 / 0.14), 0 1px 2px rgb(0 0 0 / 0.5), 0 0 0 1px var(--danger-hover);
+  --elev-control: 0 1px 2px rgb(0 0 0 / 0.3), 0 0 0 1px var(--line-strong);
+  --elev-focus: 0 0 0 1px var(--focus), 0 0 0 4px rgb(128 118 250 / 0.32);
+  --elev-composer: var(--elev-md), 0 0 0 1px var(--line-strong);
+  --elev-composer-focus: var(--elev-md), var(--elev-focus);
+}
+
+/* -- Static scales, exposed as Tailwind utilities --------------------------------------------- */
+@theme {
+  /* Replace Tailwind's default palette, radii, shadows and type scale with the project's own. */
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --text-*: initial;
+  --tracking-*: initial;
+
+  --font-sans: "Inter Variable", "Inter Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale: size / line height. 13px is the interface default, 15px is for reading. */
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 0.875rem;
+  --text-base--line-height: 1.375rem;
+  --text-md: 0.9375rem;
+  --text-md--line-height: 1.625rem;
+  --text-lg: 1.0625rem;
+  --text-lg--line-height: 1.625rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2.375rem;
+  --text-4xl--line-height: 2.75rem;
+
+  --tracking-tighter: -0.028em;
+  --tracking-tight: -0.014em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.02em;
+  --tracking-caps: 0.06em;
+
+  /* Radii: 4 for chips, 6 for small controls, 8 for controls, 12 for cards, 16 for sheets. */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+
+  /* Motion: 150 ms for colour and opacity, 200 ms for movement, 250 ms for panels. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-fade-in: fade-in 150ms var(--ease-standard) both;
+  --animate-rise: rise 220ms var(--ease-out) both;
+  --animate-pop: pop 160ms var(--ease-out) both;
+  --animate-slide-left: slide-left 240ms var(--ease-out);
+  --animate-slide-right: slide-right 240ms var(--ease-out);
+  --animate-slide-up: slide-up 250ms var(--ease-out);
+  --animate-toast: toast 220ms var(--ease-out) both;
+  --animate-word: word 240ms var(--ease-standard) both;
+  --animate-caret: caret 1.1s ease-in-out infinite;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-pulse-soft: pulse-soft 1.4s ease-in-out infinite;
+  --animate-mark: mark-pulse 1100ms var(--ease-standard) 1;
+  --animate-grow-x: grow-x 600ms var(--ease-out) both;
+  --animate-grow-y: grow-y 600ms var(--ease-out) both;
+}
+
+/* -- Keyframes (plain CSS so that they exist whether or not a utility refers to them) -------- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+@keyframes toast {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+@keyframes word {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+@keyframes mark-pulse {
+  0% {
+    box-shadow:
+      inset 0 -2px 0 var(--mark-line),
+      0 0 0 0 var(--mark-glow);
+  }
+  35% {
+    box-shadow:
+      inset 0 -2px 0 var(--mark-line),
+      0 0 0 6px var(--mark-glow);
+  }
+  100% {
+    box-shadow:
+      inset 0 -2px 0 var(--mark-line),
+      0 0 0 10px transparent;
+  }
+}
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-left-out {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-right-out {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-down-out {
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes grow-y {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+/* -- Semantic names as Tailwind utilities (resolved at run time, so they follow the theme) ---- */
+@theme inline {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-card: var(--card);
+  --color-raised: var(--raised);
+  --color-inverse: var(--inverse);
+  --color-wash: var(--wash);
+  --color-wash-strong: var(--wash-strong);
+  --color-bubble: var(--bubble);
+  --color-control: var(--control);
+  --color-control-hover: var(--control-hover);
+  --color-thumb: var(--thumb);
+  --color-scrim: var(--scrim);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-faint: var(--line-faint);
+
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-fg-faint: var(--fg-faint);
+  --color-fg-inverse: var(--fg-inverse);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-strong: var(--accent-soft-strong);
+  --color-accent-line: var(--accent-line);
+  --color-on-accent: var(--on-accent);
+  --color-focus: var(--focus);
+
+  --color-cite: var(--cite);
+  --color-cite-hover: var(--cite-hover);
+  --color-cite-line: var(--cite-line);
+  --color-cite-fg: var(--cite-fg);
+  --color-cite-solid: var(--cite-solid);
+  --color-cite-solid-fg: var(--cite-solid-fg);
+  --color-mark: var(--mark);
+  --color-mark-fg: var(--mark-fg);
+  --color-mark-line: var(--mark-line);
+
+  --color-success: var(--success);
+  --color-success-fg: var(--success-fg);
+  --color-success-soft: var(--success-soft);
+  --color-success-line: var(--success-line);
+  --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-fg: var(--danger-fg);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-line: var(--danger-line);
+  --color-warning-fg: var(--warning-fg);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-line: var(--warning-line);
+
+  --color-series-1: var(--series-1);
+  --color-series-2: var(--series-2);
+  --color-series-1-soft: var(--series-1-soft);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-axis: var(--chart-axis);
+
+  --color-file-pdf: var(--file-pdf);
+  --color-file-md: var(--file-md);
+  --color-file-html: var(--file-html);
+  --color-file-txt: var(--file-txt);
+  --color-file-page: var(--file-page);
+  --color-file-edge: var(--file-edge);
+
+  --shadow-ring: var(--elev-ring);
+  --shadow-xs: var(--elev-xs);
+  --shadow-sm: var(--elev-sm);
+  --shadow-md: var(--elev-md);
+  --shadow-lg: var(--elev-lg);
+  --shadow-xl: var(--elev-xl);
+  --shadow-sheet: var(--elev-sheet);
+  --shadow-button: var(--elev-button);
+  --shadow-button-danger: var(--elev-button-danger);
+  --shadow-control: var(--elev-control);
+  --shadow-focus: var(--elev-focus);
+  --shadow-composer: var(--elev-composer);
+  --shadow-composer-focus: var(--elev-composer-focus);
+}

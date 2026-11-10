@@ -1,0 +1,2195 @@
+{
+  "generated_at": "2026-11-10T16:32:53+00:00",
+  "question_set": "golden_set.json",
+  "corpus": {
+    "documents": 11,
+    "chunks": 168
+  },
+  "settings": {
+    "top_k": 6,
+    "min_coverage": 0.55,
+    "min_evidence": 0.5,
+    "chunk_max_chars": 700,
+    "chunk_overlap_chars": 150
+  },
+  "retrievers": {
+    "fts5": {
+      "retriever": "BM25 (SQLite FTS5)",
+      "questions": 63,
+      "answerable": 51,
+      "unanswerable": 12,
+      "section_hit_at_1": 0.4902,
+      "section_hit_at_3": 0.6863,
+      "document_hit_at_1": 0.6863,
+      "document_hit_at_3": 0.9412,
+      "section_mrr": 0.5846,
+      "correctly_abstained": 10,
+      "wrongly_abstained": 14,
+      "abstain_accuracy": 0.746,
+      "answered": 37,
+      "answers_with_expected_fact": 23,
+      "answer_accuracy": 0.451,
+      "outcomes": [
+        {
+          "id": "n01",
+          "question": "Do I get a break if I'm on a seven-hour shift, and is it paid?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.619,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]",
+          "top": [
+            "Employee Handbook > Working hours > Breaks",
+            "Employee Handbook > Working hours > Swapping shifts",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "n02",
+          "question": "If I end up working extra hours, how long do I have to take the time back?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3733,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Employee Handbook > Working hours > Standard hours"
+          ]
+        },
+        {
+          "id": "n03",
+          "question": "Does my holiday entitlement go up the longer I've worked here?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6879,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": false,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]\n\nSalaries are paid by bank transfer on the 25th of each month, or on the last working day before it if the 25th falls on a weekend or public holiday. [2]",
+          "top": [
+            "Employee Handbook > Leave > Annual leave",
+            "Records Retention Schedule > Holding records for longer",
+            "Employee Handbook > Working hours > Breaks"
+          ]
+        },
+        {
+          "id": "n04",
+          "question": "Is it possible to buy a few more days off?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Once a year, in November, you can apply to buy up to five extra days of leave for the following year. The cost is deducted from your salary in twelve equal instalments. [1]",
+          "top": [
+            "Employee Handbook > Leave > Buying additional leave",
+            "Employee Handbook > Pay and benefits > Pay day",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n05",
+          "question": "How many days of sick leave are paid at full salary?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8541,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Once you have passed probation, Calderwick Health pays company sick pay at full salary for up to 10 working days in any rolling 12-month period; after that, statutory sick pay applies. [1]",
+          "top": [
+            "Employee Handbook > Leave > Sickness absence",
+            "Employee Handbook > Leaving Calderwick Health",
+            "Employee Handbook > Leave > Buying additional leave"
+          ]
+        },
+        {
+          "id": "n06",
+          "question": "My dad has just died. How much time off am I entitled to?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6762,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "The leave year runs from 1 January to 31 December. Full-time employees receive 25 days of paid annual leave each year, plus the eight public holidays. Part-time employees receive the same entitlement pro rata to their contracted hours. After five years of continuous service your entitlement rises to 27 days, and after ten years to 30 days. [1]",
+          "top": [
+            "Employee Handbook > Leave > Annual leave",
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n07",
+          "question": "What date does our salary go into the bank?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7008,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Salaries are paid by bank transfer on the 25th of each month, or on the last working day before it if the 25th falls on a weekend or public holiday. Payslips are published in the People Portal two days before pay day. [1]",
+          "top": [
+            "Employee Handbook > Pay and benefits > Pay day",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Records Retention Schedule > How records are destroyed"
+          ]
+        },
+        {
+          "id": "n08",
+          "question": "Can I wear sandals when I'm working in a treatment room?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6554,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": false,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]",
+          "top": [
+            "Employee Handbook > Conduct at work > Dress and identification",
+            "Employee Handbook > Working hours > Breaks",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "n09",
+          "question": "How much is the training budget for a physiotherapist each year?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5636,
+          "document_rank": 2,
+          "section_rank": 2,
+          "contains_expected": true,
+          "answer": "We reimburse the annual registration fee that clinicians pay to their professional regulator. Each clinician has a development budget of £600 a year, and each non-clinical employee £300 a year, for courses agreed with their manager. [1]\n\nEveryone completes Information Governance and Data Protection training within five working days of starting and once a year after that. [2]",
+          "top": [
+            "Travel and Expense Policy > Training-related travel",
+            "Employee Handbook > Pay and benefits > Professional fees and development",
+            "Information Security Policy > Training and compliance"
+          ]
+        },
+        {
+          "id": "n10",
+          "question": "What documents do you need from me before I start the job?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5513,
+          "document_rank": 2,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "This procedure is owned by the Head of Operations and is reviewed every 12 months, or after any serious incident at a front desk. Suggestions for changes go to your clinic manager. The current version is always the one in the knowledge base; printed copies are for reference only. [1]\n\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting [2]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 10. Document control",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "New Starter Onboarding Guide > Getting paid for the first time"
+          ]
+        },
+        {
+          "id": "n11",
+          "question": "How soon after joining do I have to finish the data protection course?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8002,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Some training must be finished before you handle patient information or work alone:\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting [1]",
+          "top": [
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "Records Retention Schedule > Requests from patients",
+            "Records Retention Schedule > Holding records for longer"
+          ]
+        },
+        {
+          "id": "n12",
+          "question": "For how long will I have a buddy?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Your buddy is a colleague from your clinic, not your manager, who has been with us for at least a year. They are your first port of call for everyday questions for your first eight weeks, and you will have a 20-minute check-in together each week. [1]",
+          "top": [
+            "New Starter Onboarding Guide > Your buddy",
+            "New Starter Onboarding Guide > ",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n13",
+          "question": "How many uniform tops will I be given?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5286,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "New Starter Onboarding Guide > Your first week > Uniform",
+            "Employee Handbook > Leaving Calderwick Health",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.1 Before the doors open"
+          ]
+        },
+        {
+          "id": "n14",
+          "question": "Am I allowed to go first class on the train?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6345,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Book standard class rail travel through the Finance travel desk at least seven days ahead whenever you can. First class is allowed only when it is cheaper than the standard fare available at the time of booking. Flights are economy class and need approval from a head of department before booking. [1]",
+          "top": [
+            "Travel and Expense Policy > Travel > Rail and air",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "New Starter Onboarding Guide > Checkpoints in your first three months"
+          ]
+        },
+        {
+          "id": "n15",
+          "question": "How much can I spend on lunch when I'm away at another site all day?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3614,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Accommodation and meals > Meals while travelling",
+            "Remote and Hybrid Working Guidelines > 7. Working from another country",
+            "Travel and Expense Policy > Purpose"
+          ]
+        },
+        {
+          "id": "n16",
+          "question": "I got a parking ticket while visiting another clinic. Will the company cover it?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2361,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Travel > Parking and tolls",
+            "IT Service Desk FAQ > Equipment and software > How do I request new software?",
+            "Remote and Hybrid Working Guidelines > 7. Working from another country"
+          ]
+        },
+        {
+          "id": "n17",
+          "question": "How long after I've paid for something can I still claim it back?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.697,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Claims approved by the 10th of the month are reimbursed with your salary on the 25th. Claims approved after the 10th are paid the following month. [1]\n\nWithout an authorisation code the patient pays in full and claims the cost back from their insurer. [2]",
+          "top": [
+            "Travel and Expense Policy > Making a claim > When you are paid",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Travel and Expense Policy > Making a claim > Deadline"
+          ]
+        },
+        {
+          "id": "n18",
+          "question": "What's the monthly spending limit on a company card?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Clinic managers and heads of department hold a company payment card with a monthly limit of £1,500. [1]",
+          "top": [
+            "Travel and Expense Policy > Company payment cards",
+            "Travel and Expense Policy > Purpose",
+            "IT Service Desk FAQ > Equipment and software > The printer is not working."
+          ]
+        },
+        {
+          "id": "n19",
+          "question": "Is there a day when the whole team is expected in the office?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6255,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Tell the People Team about a pregnancy or adoption match at least 15 weeks before the expected date so that cover can be planned. [1]\n\nEligible full-time employees may work from home for up to two days a week. The other three days are spent at the Eastmere support office or at a clinic. Each team chooses one anchor day a week when everyone is in the office together; your manager will tell you which day that is. New starters work on site every day for their first four weeks. [2]",
+          "top": [
+            "Employee Handbook > ",
+            "Employee Handbook > Leave > Parental leave",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n20",
+          "question": "Can someone who has just joined work from home straight away?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5666,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "At every visit, ask whether the patient's telephone number, email address or GP has changed, and update ClinicDesk straight away. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 6. Information security at home",
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.4 Keeping details current",
+            "Information Security Policy > Passwords and sign-in > Multi-factor authentication"
+          ]
+        },
+        {
+          "id": "n21",
+          "question": "When do I have to complete the home workstation assessment?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Complete the online workstation self-assessment within two weeks of starting hybrid working and again whenever your home set-up changes. Report any work-related accident at home to your manager in the same way as an accident on site. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 5. Health and safety at home",
+            "Remote and Hybrid Working Guidelines > 4. Equipment",
+            "Travel and Expense Policy > What we do not reimburse"
+          ]
+        },
+        {
+          "id": "n22",
+          "question": "Can my manager cancel my hybrid working arrangement?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.819,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Hybrid working is not a contractual right. Your manager may ask you to attend on a home day with 48 hours' notice when the work requires it, and an arrangement can be ended with four weeks' notice if it is not working for the team. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Remote and Hybrid Working Guidelines > 3. Core hours and availability",
+            "Remote and Hybrid Working Guidelines > 5. Health and safety at home"
+          ]
+        },
+        {
+          "id": "n23",
+          "question": "How long before my laptop locks itself if I walk away?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6386,
+          "document_rank": 2,
+          "section_rank": 5,
+          "contains_expected": false,
+          "answer": "Lock your screen whenever you leave your desk. At the end of the day, lock away paper that contains confidential or patient-identifiable information. Confidential paper waste goes in the locked shredding bins, never in ordinary recycling. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 6. Information security at home",
+            "Information Security Policy > Handling information > Clear desk and clear screen",
+            "Front Desk Standard Operating Procedure > 7. Confidentiality at the desk"
+          ]
+        },
+        {
+          "id": "n24",
+          "question": "How quickly do critical updates need installing?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Company laptops are encrypted and are set to lock automatically after five minutes without activity. Do not change these settings. Install operating system and application updates within seven days of being prompted; updates that IT marks as critical must be installed within 48 hours. [1]",
+          "top": [
+            "Information Security Policy > Devices > Laptops and phones",
+            "Employee Handbook > Leave > Buying additional leave",
+            "IT Service Desk FAQ > Working remotely > Can I read work email on my own phone?"
+          ]
+        },
+        {
+          "id": "n25",
+          "question": "When does IT switch off the login of someone who is leaving?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3083,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Leave > Compassionate leave",
+            "Employee Handbook > Leave > Annual leave",
+            "Employee Handbook > Leave > Buying additional leave"
+          ]
+        },
+        {
+          "id": "n26",
+          "question": "Can I have my sign-in codes sent by text message?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8007,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Multi-factor authentication is mandatory for email, ClinicDesk, the People Portal and the CalderLink VPN. Use the authenticator app on your work or personal phone. Text-message codes are not supported. If you receive a sign-in prompt that you did not start, deny it and report it to the IT Service Desk straight away. [1]",
+          "top": [
+            "Information Security Policy > Passwords and sign-in > Multi-factor authentication",
+            "Information Security Policy > Handling information > Sending patient information",
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients"
+          ]
+        },
+        {
+          "id": "n27",
+          "question": "Where am I supposed to store my work passwords?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.841,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Every employee has a KeyVault password manager account. Store work passwords there, not in a notebook, a spreadsheet or your browser. [1]",
+          "top": [
+            "Information Security Policy > Passwords and sign-in > Passwords",
+            "IT Service Desk FAQ > Wi-Fi and phones > How much email can I store?",
+            "IT Service Desk FAQ > Working remotely > Can I read work email on my own phone?"
+          ]
+        },
+        {
+          "id": "n28",
+          "question": "What number do I ring to reach IT support?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5207,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > The printer is not working.",
+            "Front Desk Standard Operating Procedure > 6. Telephone calls and messages",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "n29",
+          "question": "How often do we get a new laptop?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "Sign in to the self-service page from your laptop while you still have the old phone, choose “Security info” and add the new phone. If the old phone is gone, raise a Priority 3 ticket and we will reset your sign-in methods after an identity check. [1]",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > How do I order equipment for a new starter?",
+            "IT Service Desk FAQ > Accounts and passwords > How do I set up the authenticator app on a new phone?",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n30",
+          "question": "How far in advance should I ask IT for a laptop for someone joining my team?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5102,
+          "document_rank": 2,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 8. Meetings",
+            "IT Service Desk FAQ > Wi-Fi and phones > Which Wi-Fi network should I use?",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n31",
+          "question": "How big can my mailbox get?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Ask the owner of the mailbox or folder to raise the ticket, or attach their written approval to yours. We cannot grant access on your own request. [1]",
+          "top": [
+            "IT Service Desk FAQ > Accounts and passwords > Can I have access to a shared mailbox or folder?",
+            "Records Retention Schedule > Systems and backups",
+            "IT Service Desk FAQ > Wi-Fi and phones > How much email can I store?"
+          ]
+        },
+        {
+          "id": "n32",
+          "question": "How long do we keep the HR file of someone who has left the company?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4876,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Information Security Policy > Devices > Removable media",
+            "Information Security Policy > Software and cloud services",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Late cancellations"
+          ]
+        },
+        {
+          "id": "n33",
+          "question": "A patient has asked for a copy of their notes. How long do we have to reply?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4071,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Records Retention Schedule > Requests from patients",
+            "Information Security Policy > Handling information > Classification",
+            "Information Security Policy > Email and phishing"
+          ]
+        },
+        {
+          "id": "n34",
+          "question": "For how long are phone calls to the clinics kept on record?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7746,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Raise a ticket in the Service Desk portal, email it-servicedesk@example.com, or call extension 4357 from any clinic phone. Use the phone for anything that stops a clinic seeing patients. [1]\n\nRecord: Recordings of telephone calls to clinics; Kept for: 90 days; Then: Automatically deleted [2]",
+          "top": [
+            "IT Service Desk FAQ > Wi-Fi and phones > I have lost my work phone.",
+            "IT Service Desk FAQ > Contacting the Service Desk > How do I get help?",
+            "Records Retention Schedule > Patient records"
+          ]
+        },
+        {
+          "id": "n35",
+          "question": "What time does the person opening the clinic have to be in?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 3,
+          "section_rank": 5,
+          "contains_expected": false,
+          "answer": "Every ticket is given a priority when it is logged. Response times are measured during opening hours, except for Priority 1. [1]",
+          "top": [
+            "IT Service Desk FAQ > Contacting the Service Desk > How quickly will my ticket be handled?",
+            "Employee Handbook > Working hours > Standard hours",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.2 If the float is wrong"
+          ]
+        },
+        {
+          "id": "n36",
+          "question": "Can a 14-year-old come to their appointment on their own?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3804,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Accounts and passwords > How do I set up the authenticator app on a new phone?",
+            "Records Retention Schedule > Patient records",
+            "Patient Cancellation and Refund Policy > Care Plan memberships"
+          ]
+        },
+        {
+          "id": "n37",
+          "question": "How do I arrange an interpreter for a patient?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Offer a chaperone to any patient who asks for one; the duty clinician arranges it. An interpreter is booked through the clinic manager with at least 48 hours' notice, and relatives should not be used as interpreters for clinical conversations. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.3 Children and patients who need support",
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Records Retention Schedule > About this schedule"
+          ]
+        },
+        {
+          "id": "n38",
+          "question": "What do I need to record for a patient whose insurance company is paying?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.577,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Before the first appointment, record the insurer's authorisation code and the number of sessions authorised. Without an authorisation code the patient pays in full and claims the cost back from their insurer. Collect any policy excess on the day of the first appointment. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients",
+            "Records Retention Schedule > Financial and corporate records",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "n39",
+          "question": "Where does everyone gather when the fire alarm goes off?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8419,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "When the alarm sounds, stop what you are doing. Take the visitor sign-in tablet, direct everyone in the waiting area to the nearest exit and go to the assembly point in the car park. [1]\n\nNobody goes back inside until the fire service says it is safe. [2]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 8. Emergencies > 8.2 Fire alarm",
+            "New Starter Onboarding Guide > Your first day",
+            "New Starter Onboarding Guide > Your first week > Mandatory training"
+          ]
+        },
+        {
+          "id": "n40",
+          "question": "What do we charge someone who simply doesn't turn up?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4972,
+          "document_rank": 2,
+          "section_rank": 3,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Travel > Parking and tolls",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Notice required",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Missed appointments"
+          ]
+        },
+        {
+          "id": "n41",
+          "question": "What does a patient get if we have to cancel on them at the last minute?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6501,
+          "document_rank": 2,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "An initial assessment lasts 45 minutes and a follow-up session lasts 30 minutes. Classes last 50 minutes and have a maximum of eight people. [1]\n\nA patient who arrives more than 10 minutes late is treated as a late cancellation and offered the next available appointment. [2]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > How long are the sessions?",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Arriving late",
+            "Front Desk Standard Operating Procedure > 4. Late arrivals and missed appointments"
+          ]
+        },
+        {
+          "id": "n42",
+          "question": "How long is a gift voucher valid for?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Gift vouchers are valid for 12 months from the date of purchase and cannot be exchanged for cash. [1]",
+          "top": [
+            "Patient Cancellation and Refund Policy > Refunds > Gift vouchers",
+            "Employee Handbook > Conduct at work > Gifts and hospitality"
+          ]
+        },
+        {
+          "id": "n43",
+          "question": "How long does it take for a refund to reach the patient?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Refunds go back to the original payment method and reach the patient within seven working days. A refund for a cash payment of more than £50 is made by bank transfer rather than from the till. [1]",
+          "top": [
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Patient Cancellation and Refund Policy > Refunds > Who can approve a refund",
+            "Patient Cancellation and Refund Policy > Refunds > Gift vouchers"
+          ]
+        },
+        {
+          "id": "n44",
+          "question": "What do you get with the Active plan?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Plan: Active; Monthly price: £69; Included each month: 2 follow-up sessions and 1 class a week; Discount on extra sessions: 15% [1]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?",
+            "Calderwick Care Plan: Product FAQ > Using the plan > What is in the Calderwick Connect app?",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What plans are there?"
+          ]
+        },
+        {
+          "id": "n45",
+          "question": "How much is a follow-up appointment for someone who isn't a member?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6908,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "Yes. Up to three people living at the same address can be added to an Active or Performance plan for £25 a month each. Each added person receives one follow-up session a month and the member's discount on extra sessions. [1]\n\nThe opening receptionist arrives by 07:30, thirty minutes before the first appointment at 08:00, and works through the following steps in order. [2]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?",
+            "Patient Cancellation and Refund Policy > Care Plan memberships",
+            "Calderwick Care Plan: Product FAQ > Using the plan > What is in the Calderwick Connect app?"
+          ]
+        },
+        {
+          "id": "n46",
+          "question": "What does it cost to add my husband to my plan?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4809,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What does a session cost without a plan?",
+            "IT Service Desk FAQ > Equipment and software > The printer is not working.",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > If we cancel"
+          ]
+        },
+        {
+          "id": "n47",
+          "question": "On what day of the month is the membership payment collected?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5859,
+          "document_rank": 2,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Before the first appointment, record the insurer's authorisation code and the number of sessions authorised. Without an authorisation code the patient pays in full and claims the cost back from their insurer. Collect any policy excess on the day of the first appointment. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients",
+            "Calderwick Care Plan: Product FAQ > Problems > Who handles questions about billing?",
+            "Calderwick Care Plan: Product FAQ > Payments > How is the plan paid for?"
+          ]
+        },
+        {
+          "id": "n48",
+          "question": "A member has broken her ankle and can't come in for a while. What are her options?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4848,
+          "document_rank": 2,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken.",
+            "Calderwick Care Plan: Product FAQ > Using the plan > How do members book?",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?"
+          ]
+        },
+        {
+          "id": "n49",
+          "question": "Is there a deadline for making a complaint?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6318,
+          "document_rank": 3,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "Some training must be finished before you handle patient information or work alone:\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting\nCourse: Fire Safety; Who: Everyone; Deadline: Within 30 days of starting\nCourse: Basic Life Support; Who: Patient-facing staff; Deadline: Within 30 days of starting\nCourse: Safeguarding Adults and Children, Level 2; Who: Patient-facing staff; Deadline: Within 30 days of starting\nCourse: Manual Handling; Who: Clinicians; Deadline: Within 60 days of starting [1]",
+          "top": [
+            "Travel and Expense Policy > Making a claim > Deadline",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "Complaints Handling Procedure > How complaints are received"
+          ]
+        },
+        {
+          "id": "n50",
+          "question": "How long does a patient have to ask for a review if they aren't happy with our reply?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4784,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Information Security Policy > Email and phishing",
+            "New Starter Onboarding Guide > Checkpoints in your first three months",
+            "Complaints Handling Procedure > Stage 3: Independent review"
+          ]
+        },
+        {
+          "id": "n51",
+          "question": "How often does the board hear about complaints?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6128,
+          "document_rank": 1,
+          "section_rank": 2,
+          "contains_expected": true,
+          "answer": "Every upheld complaint has at least one recorded action. The Head of Operations reports complaint numbers, themes and completed actions to the board every quarter, and clinic managers share the lessons at their next team meeting. [1]",
+          "top": [
+            "Complaints Handling Procedure > Purpose",
+            "Complaints Handling Procedure > Learning from complaints",
+            "IT Service Desk FAQ > "
+          ]
+        },
+        {
+          "id": "x01",
+          "question": "Can I bring my dog into the office on Fridays?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5185,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Standard hours",
+            "New Starter Onboarding Guide > Getting paid for the first time",
+            "IT Service Desk FAQ > Contacting the Service Desk > When is the Service Desk open?"
+          ]
+        },
+        {
+          "id": "x02",
+          "question": "Am I allowed to have a second job alongside this one?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3892,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Payments > How is the plan paid for?",
+            "New Starter Onboarding Guide > Your first week > Learning the systems",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.1 Before the doors open"
+          ]
+        },
+        {
+          "id": "x03",
+          "question": "How much is the relocation allowance if I transfer to another clinic?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.293,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 7. Working from another country",
+            "Calderwick Care Plan: Product FAQ > Changing, pausing and cancelling > What if a member cannot use the plan for medical reasons?",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "x04",
+          "question": "What is the procedure after a needlestick or sharps injury?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2778,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Complaints Handling Procedure > Purpose",
+            "Complaints Handling Procedure > Contact",
+            "Front Desk Standard Operating Procedure > 10. Document control"
+          ]
+        },
+        {
+          "id": "x05",
+          "question": "Do we get private medical insurance as a staff benefit?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3844,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Pay and benefits > Staff treatment discount",
+            "Calderwick Care Plan: Product FAQ > Changing, pausing and cancelling > What if a member cannot use the plan for medical reasons?",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "x06",
+          "question": "Which payroll software does Finance use?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3218,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > How do I request new software?",
+            "Information Security Policy > Software and cloud services",
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken."
+          ]
+        },
+        {
+          "id": "x07",
+          "question": "What's the mileage rate for an electric company car?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2769,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 4. Equipment",
+            "Travel and Expense Policy > Travel > Driving"
+          ]
+        },
+        {
+          "id": "x08",
+          "question": "How many patients is each physio expected to see per day?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5103,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Leave > Parental leave",
+            "Front Desk Standard Operating Procedure > 8. Emergencies > 8.3 Aggressive behaviour",
+            "Employee Handbook > "
+          ]
+        },
+        {
+          "id": "x09",
+          "question": "Who do I contact about a broken treatment couch?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4089,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken.",
+            "Complaints Handling Procedure > Contact",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "x10",
+          "question": "How long do we keep patient X-ray images?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2112,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.2 New patients",
+            "Patient Cancellation and Refund Policy > If a patient is unhappy with a decision",
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.3 Children and patients who need support"
+          ]
+        },
+        {
+          "id": "x11",
+          "question": "Is there a student discount on physiotherapy sessions?",
+          "answerable": false,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6844,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "Employees and their immediate family receive 50% off physiotherapy sessions at any Calderwick clinic, subject to availability. [1]",
+          "top": [
+            "Employee Handbook > Pay and benefits > Staff treatment discount",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What plans are there?",
+            "Patient Cancellation and Refund Policy > Refunds > Prepaid sessions and packages"
+          ]
+        },
+        {
+          "id": "x12",
+          "question": "When is the next all-staff meeting?",
+          "answerable": false,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7467,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "Every upheld complaint has at least one recorded action. The Head of Operations reports complaint numbers, themes and completed actions to the board every quarter, and clinic managers share the lessons at their next team meeting. [1]",
+          "top": [
+            "Complaints Handling Procedure > Learning from complaints",
+            "Remote and Hybrid Working Guidelines > 8. Meetings",
+            "New Starter Onboarding Guide > Your first day"
+          ]
+        }
+      ]
+    },
+    "bm25": {
+      "retriever": "BM25 (pure Python)",
+      "questions": 63,
+      "answerable": 51,
+      "unanswerable": 12,
+      "section_hit_at_1": 0.4902,
+      "section_hit_at_3": 0.6863,
+      "document_hit_at_1": 0.6863,
+      "document_hit_at_3": 0.9412,
+      "section_mrr": 0.5846,
+      "correctly_abstained": 10,
+      "wrongly_abstained": 14,
+      "abstain_accuracy": 0.746,
+      "answered": 37,
+      "answers_with_expected_fact": 23,
+      "answer_accuracy": 0.451,
+      "outcomes": [
+        {
+          "id": "n01",
+          "question": "Do I get a break if I'm on a seven-hour shift, and is it paid?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.619,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]",
+          "top": [
+            "Employee Handbook > Working hours > Breaks",
+            "Employee Handbook > Working hours > Swapping shifts",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "n02",
+          "question": "If I end up working extra hours, how long do I have to take the time back?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3733,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Employee Handbook > Working hours > Standard hours"
+          ]
+        },
+        {
+          "id": "n03",
+          "question": "Does my holiday entitlement go up the longer I've worked here?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6879,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": false,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]\n\nSalaries are paid by bank transfer on the 25th of each month, or on the last working day before it if the 25th falls on a weekend or public holiday. [2]",
+          "top": [
+            "Employee Handbook > Leave > Annual leave",
+            "Records Retention Schedule > Holding records for longer",
+            "Employee Handbook > Working hours > Breaks"
+          ]
+        },
+        {
+          "id": "n04",
+          "question": "Is it possible to buy a few more days off?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Once a year, in November, you can apply to buy up to five extra days of leave for the following year. The cost is deducted from your salary in twelve equal instalments. [1]",
+          "top": [
+            "Employee Handbook > Leave > Buying additional leave",
+            "Employee Handbook > Pay and benefits > Pay day",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n05",
+          "question": "How many days of sick leave are paid at full salary?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8541,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Once you have passed probation, Calderwick Health pays company sick pay at full salary for up to 10 working days in any rolling 12-month period; after that, statutory sick pay applies. [1]",
+          "top": [
+            "Employee Handbook > Leave > Sickness absence",
+            "Employee Handbook > Leaving Calderwick Health",
+            "Employee Handbook > Leave > Buying additional leave"
+          ]
+        },
+        {
+          "id": "n06",
+          "question": "My dad has just died. How much time off am I entitled to?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6762,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "The leave year runs from 1 January to 31 December. Full-time employees receive 25 days of paid annual leave each year, plus the eight public holidays. Part-time employees receive the same entitlement pro rata to their contracted hours. After five years of continuous service your entitlement rises to 27 days, and after ten years to 30 days. [1]",
+          "top": [
+            "Employee Handbook > Leave > Annual leave",
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n07",
+          "question": "What date does our salary go into the bank?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7008,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Salaries are paid by bank transfer on the 25th of each month, or on the last working day before it if the 25th falls on a weekend or public holiday. Payslips are published in the People Portal two days before pay day. [1]",
+          "top": [
+            "Employee Handbook > Pay and benefits > Pay day",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Records Retention Schedule > How records are destroyed"
+          ]
+        },
+        {
+          "id": "n08",
+          "question": "Can I wear sandals when I'm working in a treatment room?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6554,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": false,
+          "answer": "Anyone working a shift longer than six hours takes an unpaid break of at least 30 minutes, away from the desk or treatment room. Clinicians have a protected 15-minute administration slot after every fourth patient. [1]",
+          "top": [
+            "Employee Handbook > Conduct at work > Dress and identification",
+            "Employee Handbook > Working hours > Breaks",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "n09",
+          "question": "How much is the training budget for a physiotherapist each year?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5636,
+          "document_rank": 2,
+          "section_rank": 2,
+          "contains_expected": true,
+          "answer": "We reimburse the annual registration fee that clinicians pay to their professional regulator. Each clinician has a development budget of £600 a year, and each non-clinical employee £300 a year, for courses agreed with their manager. [1]\n\nEveryone completes Information Governance and Data Protection training within five working days of starting and once a year after that. [2]",
+          "top": [
+            "Travel and Expense Policy > Training-related travel",
+            "Employee Handbook > Pay and benefits > Professional fees and development",
+            "Information Security Policy > Training and compliance"
+          ]
+        },
+        {
+          "id": "n10",
+          "question": "What documents do you need from me before I start the job?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5513,
+          "document_rank": 2,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "This procedure is owned by the Head of Operations and is reviewed every 12 months, or after any serious incident at a front desk. Suggestions for changes go to your clinic manager. The current version is always the one in the knowledge base; printed copies are for reference only. [1]\n\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting [2]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 10. Document control",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "New Starter Onboarding Guide > Getting paid for the first time"
+          ]
+        },
+        {
+          "id": "n11",
+          "question": "How soon after joining do I have to finish the data protection course?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8002,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Some training must be finished before you handle patient information or work alone:\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting [1]",
+          "top": [
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "Records Retention Schedule > Requests from patients",
+            "Records Retention Schedule > Holding records for longer"
+          ]
+        },
+        {
+          "id": "n12",
+          "question": "For how long will I have a buddy?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Your buddy is a colleague from your clinic, not your manager, who has been with us for at least a year. They are your first port of call for everyday questions for your first eight weeks, and you will have a 20-minute check-in together each week. [1]",
+          "top": [
+            "New Starter Onboarding Guide > Your buddy",
+            "New Starter Onboarding Guide > ",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n13",
+          "question": "How many uniform tops will I be given?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5286,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "New Starter Onboarding Guide > Your first week > Uniform",
+            "Employee Handbook > Leaving Calderwick Health",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.1 Before the doors open"
+          ]
+        },
+        {
+          "id": "n14",
+          "question": "Am I allowed to go first class on the train?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6345,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Book standard class rail travel through the Finance travel desk at least seven days ahead whenever you can. First class is allowed only when it is cheaper than the standard fare available at the time of booking. Flights are economy class and need approval from a head of department before booking. [1]",
+          "top": [
+            "Travel and Expense Policy > Travel > Rail and air",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "New Starter Onboarding Guide > Checkpoints in your first three months"
+          ]
+        },
+        {
+          "id": "n15",
+          "question": "How much can I spend on lunch when I'm away at another site all day?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3614,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Accommodation and meals > Meals while travelling",
+            "Remote and Hybrid Working Guidelines > 7. Working from another country",
+            "Travel and Expense Policy > Purpose"
+          ]
+        },
+        {
+          "id": "n16",
+          "question": "I got a parking ticket while visiting another clinic. Will the company cover it?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2361,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Travel > Parking and tolls",
+            "IT Service Desk FAQ > Equipment and software > How do I request new software?",
+            "Remote and Hybrid Working Guidelines > 7. Working from another country"
+          ]
+        },
+        {
+          "id": "n17",
+          "question": "How long after I've paid for something can I still claim it back?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.697,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Claims approved by the 10th of the month are reimbursed with your salary on the 25th. Claims approved after the 10th are paid the following month. [1]\n\nWithout an authorisation code the patient pays in full and claims the cost back from their insurer. [2]",
+          "top": [
+            "Travel and Expense Policy > Making a claim > When you are paid",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Travel and Expense Policy > Making a claim > Deadline"
+          ]
+        },
+        {
+          "id": "n18",
+          "question": "What's the monthly spending limit on a company card?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Clinic managers and heads of department hold a company payment card with a monthly limit of £1,500. [1]",
+          "top": [
+            "Travel and Expense Policy > Company payment cards",
+            "Travel and Expense Policy > Purpose",
+            "IT Service Desk FAQ > Equipment and software > The printer is not working."
+          ]
+        },
+        {
+          "id": "n19",
+          "question": "Is there a day when the whole team is expected in the office?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6255,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Tell the People Team about a pregnancy or adoption match at least 15 weeks before the expected date so that cover can be planned. [1]\n\nEligible full-time employees may work from home for up to two days a week. The other three days are spent at the Eastmere support office or at a clinic. Each team chooses one anchor day a week when everyone is in the office together; your manager will tell you which day that is. New starters work on site every day for their first four weeks. [2]",
+          "top": [
+            "Employee Handbook > ",
+            "Employee Handbook > Leave > Parental leave",
+            "Remote and Hybrid Working Guidelines > 2. How much time can be worked remotely"
+          ]
+        },
+        {
+          "id": "n20",
+          "question": "Can someone who has just joined work from home straight away?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5666,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "At every visit, ask whether the patient's telephone number, email address or GP has changed, and update ClinicDesk straight away. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 6. Information security at home",
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.4 Keeping details current",
+            "Information Security Policy > Passwords and sign-in > Multi-factor authentication"
+          ]
+        },
+        {
+          "id": "n21",
+          "question": "When do I have to complete the home workstation assessment?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Complete the online workstation self-assessment within two weeks of starting hybrid working and again whenever your home set-up changes. Report any work-related accident at home to your manager in the same way as an accident on site. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 5. Health and safety at home",
+            "Remote and Hybrid Working Guidelines > 4. Equipment",
+            "Travel and Expense Policy > What we do not reimburse"
+          ]
+        },
+        {
+          "id": "n22",
+          "question": "Can my manager cancel my hybrid working arrangement?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.819,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Hybrid working is not a contractual right. Your manager may ask you to attend on a home day with 48 hours' notice when the work requires it, and an arrangement can be ended with four weeks' notice if it is not working for the team. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Remote and Hybrid Working Guidelines > 3. Core hours and availability",
+            "Remote and Hybrid Working Guidelines > 5. Health and safety at home"
+          ]
+        },
+        {
+          "id": "n23",
+          "question": "How long before my laptop locks itself if I walk away?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6386,
+          "document_rank": 2,
+          "section_rank": 5,
+          "contains_expected": false,
+          "answer": "Lock your screen whenever you leave your desk. At the end of the day, lock away paper that contains confidential or patient-identifiable information. Confidential paper waste goes in the locked shredding bins, never in ordinary recycling. [1]",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 6. Information security at home",
+            "Information Security Policy > Handling information > Clear desk and clear screen",
+            "Front Desk Standard Operating Procedure > 7. Confidentiality at the desk"
+          ]
+        },
+        {
+          "id": "n24",
+          "question": "How quickly do critical updates need installing?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Company laptops are encrypted and are set to lock automatically after five minutes without activity. Do not change these settings. Install operating system and application updates within seven days of being prompted; updates that IT marks as critical must be installed within 48 hours. [1]",
+          "top": [
+            "Information Security Policy > Devices > Laptops and phones",
+            "Employee Handbook > Leave > Buying additional leave",
+            "IT Service Desk FAQ > Working remotely > Can I read work email on my own phone?"
+          ]
+        },
+        {
+          "id": "n25",
+          "question": "When does IT switch off the login of someone who is leaving?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3083,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Leave > Compassionate leave",
+            "Employee Handbook > Leave > Annual leave",
+            "Employee Handbook > Leave > Buying additional leave"
+          ]
+        },
+        {
+          "id": "n26",
+          "question": "Can I have my sign-in codes sent by text message?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8007,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Multi-factor authentication is mandatory for email, ClinicDesk, the People Portal and the CalderLink VPN. Use the authenticator app on your work or personal phone. Text-message codes are not supported. If you receive a sign-in prompt that you did not start, deny it and report it to the IT Service Desk straight away. [1]",
+          "top": [
+            "Information Security Policy > Passwords and sign-in > Multi-factor authentication",
+            "Information Security Policy > Handling information > Sending patient information",
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients"
+          ]
+        },
+        {
+          "id": "n27",
+          "question": "Where am I supposed to store my work passwords?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.841,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Every employee has a KeyVault password manager account. Store work passwords there, not in a notebook, a spreadsheet or your browser. [1]",
+          "top": [
+            "Information Security Policy > Passwords and sign-in > Passwords",
+            "IT Service Desk FAQ > Wi-Fi and phones > How much email can I store?",
+            "IT Service Desk FAQ > Working remotely > Can I read work email on my own phone?"
+          ]
+        },
+        {
+          "id": "n28",
+          "question": "What number do I ring to reach IT support?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5207,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > The printer is not working.",
+            "Front Desk Standard Operating Procedure > 6. Telephone calls and messages",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "n29",
+          "question": "How often do we get a new laptop?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "Sign in to the self-service page from your laptop while you still have the old phone, choose “Security info” and add the new phone. If the old phone is gone, raise a Priority 3 ticket and we will reset your sign-in methods after an identity check. [1]",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > How do I order equipment for a new starter?",
+            "IT Service Desk FAQ > Accounts and passwords > How do I set up the authenticator app on a new phone?",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n30",
+          "question": "How far in advance should I ask IT for a laptop for someone joining my team?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5102,
+          "document_rank": 2,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 8. Meetings",
+            "IT Service Desk FAQ > Wi-Fi and phones > Which Wi-Fi network should I use?",
+            "New Starter Onboarding Guide > Who to ask"
+          ]
+        },
+        {
+          "id": "n31",
+          "question": "How big can my mailbox get?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Ask the owner of the mailbox or folder to raise the ticket, or attach their written approval to yours. We cannot grant access on your own request. [1]",
+          "top": [
+            "IT Service Desk FAQ > Accounts and passwords > Can I have access to a shared mailbox or folder?",
+            "Records Retention Schedule > Systems and backups",
+            "IT Service Desk FAQ > Wi-Fi and phones > How much email can I store?"
+          ]
+        },
+        {
+          "id": "n32",
+          "question": "How long do we keep the HR file of someone who has left the company?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4876,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Information Security Policy > Devices > Removable media",
+            "Information Security Policy > Software and cloud services",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Late cancellations"
+          ]
+        },
+        {
+          "id": "n33",
+          "question": "A patient has asked for a copy of their notes. How long do we have to reply?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4071,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Records Retention Schedule > Requests from patients",
+            "Information Security Policy > Handling information > Classification",
+            "Information Security Policy > Email and phishing"
+          ]
+        },
+        {
+          "id": "n34",
+          "question": "For how long are phone calls to the clinics kept on record?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7746,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Raise a ticket in the Service Desk portal, email it-servicedesk@example.com, or call extension 4357 from any clinic phone. Use the phone for anything that stops a clinic seeing patients. [1]\n\nRecord: Recordings of telephone calls to clinics; Kept for: 90 days; Then: Automatically deleted [2]",
+          "top": [
+            "IT Service Desk FAQ > Wi-Fi and phones > I have lost my work phone.",
+            "IT Service Desk FAQ > Contacting the Service Desk > How do I get help?",
+            "Records Retention Schedule > Patient records"
+          ]
+        },
+        {
+          "id": "n35",
+          "question": "What time does the person opening the clinic have to be in?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 3,
+          "section_rank": 5,
+          "contains_expected": false,
+          "answer": "Every ticket is given a priority when it is logged. Response times are measured during opening hours, except for Priority 1. [1]",
+          "top": [
+            "IT Service Desk FAQ > Contacting the Service Desk > How quickly will my ticket be handled?",
+            "Employee Handbook > Working hours > Standard hours",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.2 If the float is wrong"
+          ]
+        },
+        {
+          "id": "n36",
+          "question": "Can a 14-year-old come to their appointment on their own?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3804,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Accounts and passwords > How do I set up the authenticator app on a new phone?",
+            "Records Retention Schedule > Patient records",
+            "Patient Cancellation and Refund Policy > Care Plan memberships"
+          ]
+        },
+        {
+          "id": "n37",
+          "question": "How do I arrange an interpreter for a patient?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Offer a chaperone to any patient who asks for one; the duty clinician arranges it. An interpreter is booked through the clinic manager with at least 48 hours' notice, and relatives should not be used as interpreters for clinical conversations. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.3 Children and patients who need support",
+            "Remote and Hybrid Working Guidelines > 9. Changing or ending an arrangement",
+            "Records Retention Schedule > About this schedule"
+          ]
+        },
+        {
+          "id": "n38",
+          "question": "What do I need to record for a patient whose insurance company is paying?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.577,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Before the first appointment, record the insurer's authorisation code and the number of sessions authorised. Without an authorisation code the patient pays in full and claims the cost back from their insurer. Collect any policy excess on the day of the first appointment. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients",
+            "Records Retention Schedule > Financial and corporate records",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "n39",
+          "question": "Where does everyone gather when the fire alarm goes off?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.8419,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "When the alarm sounds, stop what you are doing. Take the visitor sign-in tablet, direct everyone in the waiting area to the nearest exit and go to the assembly point in the car park. [1]\n\nNobody goes back inside until the fire service says it is safe. [2]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 8. Emergencies > 8.2 Fire alarm",
+            "New Starter Onboarding Guide > Your first day",
+            "New Starter Onboarding Guide > Your first week > Mandatory training"
+          ]
+        },
+        {
+          "id": "n40",
+          "question": "What do we charge someone who simply doesn't turn up?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4972,
+          "document_rank": 2,
+          "section_rank": 3,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Travel and Expense Policy > Travel > Parking and tolls",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Notice required",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Missed appointments"
+          ]
+        },
+        {
+          "id": "n41",
+          "question": "What does a patient get if we have to cancel on them at the last minute?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6501,
+          "document_rank": 2,
+          "section_rank": 4,
+          "contains_expected": false,
+          "answer": "An initial assessment lasts 45 minutes and a follow-up session lasts 30 minutes. Classes last 50 minutes and have a maximum of eight people. [1]\n\nA patient who arrives more than 10 minutes late is treated as a late cancellation and offered the next available appointment. [2]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > How long are the sessions?",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > Arriving late",
+            "Front Desk Standard Operating Procedure > 4. Late arrivals and missed appointments"
+          ]
+        },
+        {
+          "id": "n42",
+          "question": "How long is a gift voucher valid for?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Gift vouchers are valid for 12 months from the date of purchase and cannot be exchanged for cash. [1]",
+          "top": [
+            "Patient Cancellation and Refund Policy > Refunds > Gift vouchers",
+            "Employee Handbook > Conduct at work > Gifts and hospitality"
+          ]
+        },
+        {
+          "id": "n43",
+          "question": "How long does it take for a refund to reach the patient?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 1,
+          "contains_expected": true,
+          "answer": "Refunds go back to the original payment method and reach the patient within seven working days. A refund for a cash payment of more than £50 is made by bank transfer rather than from the till. [1]",
+          "top": [
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid",
+            "Patient Cancellation and Refund Policy > Refunds > Who can approve a refund",
+            "Patient Cancellation and Refund Policy > Refunds > Gift vouchers"
+          ]
+        },
+        {
+          "id": "n44",
+          "question": "What do you get with the Active plan?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 1.0,
+          "document_rank": 1,
+          "section_rank": 3,
+          "contains_expected": true,
+          "answer": "Plan: Active; Monthly price: £69; Included each month: 2 follow-up sessions and 1 class a week; Discount on extra sessions: 15% [1]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?",
+            "Calderwick Care Plan: Product FAQ > Using the plan > What is in the Calderwick Connect app?",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What plans are there?"
+          ]
+        },
+        {
+          "id": "n45",
+          "question": "How much is a follow-up appointment for someone who isn't a member?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6908,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "Yes. Up to three people living at the same address can be added to an Active or Performance plan for £25 a month each. Each added person receives one follow-up session a month and the member's discount on extra sessions. [1]\n\nThe opening receptionist arrives by 07:30, thirty minutes before the first appointment at 08:00, and works through the following steps in order. [2]",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?",
+            "Patient Cancellation and Refund Policy > Care Plan memberships",
+            "Calderwick Care Plan: Product FAQ > Using the plan > What is in the Calderwick Connect app?"
+          ]
+        },
+        {
+          "id": "n46",
+          "question": "What does it cost to add my husband to my plan?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4809,
+          "document_rank": 1,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What does a session cost without a plan?",
+            "IT Service Desk FAQ > Equipment and software > The printer is not working.",
+            "Patient Cancellation and Refund Policy > Cancelling or moving an appointment > If we cancel"
+          ]
+        },
+        {
+          "id": "n47",
+          "question": "On what day of the month is the membership payment collected?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.5859,
+          "document_rank": 2,
+          "section_rank": 3,
+          "contains_expected": false,
+          "answer": "Before the first appointment, record the insurer's authorisation code and the number of sessions authorised. Without an authorisation code the patient pays in full and claims the cost back from their insurer. Collect any policy excess on the day of the first appointment. [1]",
+          "top": [
+            "Front Desk Standard Operating Procedure > 5. Taking payments > 5.2 Insurance-funded patients",
+            "Calderwick Care Plan: Product FAQ > Problems > Who handles questions about billing?",
+            "Calderwick Care Plan: Product FAQ > Payments > How is the plan paid for?"
+          ]
+        },
+        {
+          "id": "n48",
+          "question": "A member has broken her ankle and can't come in for a while. What are her options?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4848,
+          "document_rank": 2,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken.",
+            "Calderwick Care Plan: Product FAQ > Using the plan > How do members book?",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > Can family members be added?"
+          ]
+        },
+        {
+          "id": "n49",
+          "question": "Is there a deadline for making a complaint?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6318,
+          "document_rank": 3,
+          "section_rank": null,
+          "contains_expected": false,
+          "answer": "Some training must be finished before you handle patient information or work alone:\nCourse: Information Governance and Data Protection; Who: Everyone; Deadline: Within 5 working days of starting\nCourse: Fire Safety; Who: Everyone; Deadline: Within 30 days of starting\nCourse: Basic Life Support; Who: Patient-facing staff; Deadline: Within 30 days of starting\nCourse: Safeguarding Adults and Children, Level 2; Who: Patient-facing staff; Deadline: Within 30 days of starting\nCourse: Manual Handling; Who: Clinicians; Deadline: Within 60 days of starting [1]",
+          "top": [
+            "Travel and Expense Policy > Making a claim > Deadline",
+            "New Starter Onboarding Guide > Your first week > Mandatory training",
+            "Complaints Handling Procedure > How complaints are received"
+          ]
+        },
+        {
+          "id": "n50",
+          "question": "How long does a patient have to ask for a review if they aren't happy with our reply?",
+          "answerable": true,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4784,
+          "document_rank": 3,
+          "section_rank": 3,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Information Security Policy > Email and phishing",
+            "New Starter Onboarding Guide > Checkpoints in your first three months",
+            "Complaints Handling Procedure > Stage 3: Independent review"
+          ]
+        },
+        {
+          "id": "n51",
+          "question": "How often does the board hear about complaints?",
+          "answerable": true,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6128,
+          "document_rank": 1,
+          "section_rank": 2,
+          "contains_expected": true,
+          "answer": "Every upheld complaint has at least one recorded action. The Head of Operations reports complaint numbers, themes and completed actions to the board every quarter, and clinic managers share the lessons at their next team meeting. [1]",
+          "top": [
+            "Complaints Handling Procedure > Purpose",
+            "Complaints Handling Procedure > Learning from complaints",
+            "IT Service Desk FAQ > "
+          ]
+        },
+        {
+          "id": "x01",
+          "question": "Can I bring my dog into the office on Fridays?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5185,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Standard hours",
+            "New Starter Onboarding Guide > Getting paid for the first time",
+            "IT Service Desk FAQ > Contacting the Service Desk > When is the Service Desk open?"
+          ]
+        },
+        {
+          "id": "x02",
+          "question": "Am I allowed to have a second job alongside this one?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3892,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Calderwick Care Plan: Product FAQ > Payments > How is the plan paid for?",
+            "New Starter Onboarding Guide > Your first week > Learning the systems",
+            "Front Desk Standard Operating Procedure > 2. Opening the clinic > 2.1 Before the doors open"
+          ]
+        },
+        {
+          "id": "x03",
+          "question": "How much is the relocation allowance if I transfer to another clinic?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.293,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Remote and Hybrid Working Guidelines > 7. Working from another country",
+            "Calderwick Care Plan: Product FAQ > Changing, pausing and cancelling > What if a member cannot use the plan for medical reasons?",
+            "Patient Cancellation and Refund Policy > Refunds > How refunds are paid"
+          ]
+        },
+        {
+          "id": "x04",
+          "question": "What is the procedure after a needlestick or sharps injury?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2778,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Complaints Handling Procedure > Purpose",
+            "Complaints Handling Procedure > Contact",
+            "Front Desk Standard Operating Procedure > 10. Document control"
+          ]
+        },
+        {
+          "id": "x05",
+          "question": "Do we get private medical insurance as a staff benefit?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3844,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Pay and benefits > Staff treatment discount",
+            "Calderwick Care Plan: Product FAQ > Changing, pausing and cancelling > What if a member cannot use the plan for medical reasons?",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "x06",
+          "question": "Which payroll software does Finance use?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.3218,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > How do I request new software?",
+            "Information Security Policy > Software and cloud services",
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken."
+          ]
+        },
+        {
+          "id": "x07",
+          "question": "What's the mileage rate for an electric company car?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2769,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Working hours > Overtime and time off in lieu",
+            "Remote and Hybrid Working Guidelines > 4. Equipment",
+            "Travel and Expense Policy > Travel > Driving"
+          ]
+        },
+        {
+          "id": "x08",
+          "question": "How many patients is each physio expected to see per day?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.5103,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Employee Handbook > Leave > Parental leave",
+            "Front Desk Standard Operating Procedure > 8. Emergencies > 8.3 Aggressive behaviour",
+            "Employee Handbook > "
+          ]
+        },
+        {
+          "id": "x09",
+          "question": "Who do I contact about a broken treatment couch?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.4089,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "IT Service Desk FAQ > Equipment and software > My laptop is slow or broken.",
+            "Complaints Handling Procedure > Contact",
+            "Patient Cancellation and Refund Policy > Insurance-funded treatment"
+          ]
+        },
+        {
+          "id": "x10",
+          "question": "How long do we keep patient X-ray images?",
+          "answerable": false,
+          "abstained": true,
+          "abstain_reason": "weak_retrieval",
+          "coverage": 0.2112,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "",
+          "top": [
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.2 New patients",
+            "Patient Cancellation and Refund Policy > If a patient is unhappy with a decision",
+            "Front Desk Standard Operating Procedure > 3. Checking patients in > 3.3 Children and patients who need support"
+          ]
+        },
+        {
+          "id": "x11",
+          "question": "Is there a student discount on physiotherapy sessions?",
+          "answerable": false,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.6844,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "Employees and their immediate family receive 50% off physiotherapy sessions at any Calderwick clinic, subject to availability. [1]",
+          "top": [
+            "Employee Handbook > Pay and benefits > Staff treatment discount",
+            "Calderwick Care Plan: Product FAQ > Plans and prices > What plans are there?",
+            "Patient Cancellation and Refund Policy > Refunds > Prepaid sessions and packages"
+          ]
+        },
+        {
+          "id": "x12",
+          "question": "When is the next all-staff meeting?",
+          "answerable": false,
+          "abstained": false,
+          "abstain_reason": null,
+          "coverage": 0.7467,
+          "document_rank": null,
+          "section_rank": null,
+          "contains_expected": null,
+          "answer": "Every upheld complaint has at least one recorded action. The Head of Operations reports complaint numbers, themes and completed actions to the board every quarter, and clinic managers share the lessons at their next team meeting. [1]",
+          "top": [
+            "Complaints Handling Procedure > Learning from complaints",
+            "Remote and Hybrid Working Guidelines > 8. Meetings",
+            "New Starter Onboarding Guide > Your first day"
+          ]
+        }
+      ]
+    }
+  }
+}
